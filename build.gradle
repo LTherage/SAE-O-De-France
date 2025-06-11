@@ -29,3 +29,11 @@ javafx {
     version = '21.0.1'
     modules = ['javafx.controls', 'javafx.fxml']
 }
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation 'org.mockito:mockito-core:5.17.0'
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.17.0'
+    testImplementation("org.assertj:assertj-core:3.27.2")
+}
