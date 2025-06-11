@@ -1,6 +1,7 @@
 package fr.univartois.butinfo.sae.model;
 
 import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.SortedList;
 
@@ -11,6 +12,7 @@ import java.util.Objects;
 public class Commande implements RemisesPossibles {
     private final int id;
 
+
     private static int nextId = 0;
     private final ObservableList<LigneDeCommande> lignesDeCommande;
     private final Client client;
@@ -18,8 +20,7 @@ public class Commande implements RemisesPossibles {
     public Commande(Client client) {
         this.id = nextId++;
         this.client = client;
-        lignesDeCommande = new SimpleListProperty<>();
-    }
+        lignesDeCommande = new SimpleListProperty<>(FXCollections.observableArrayList());    }
 
     @Override
     public double montantDeLaRemise() {
