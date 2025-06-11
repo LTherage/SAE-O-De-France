@@ -41,11 +41,11 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Il faut d'abord récupérer la description de la vue (au format FXML).
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/StockEauView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/hello-view.fxml"));
         Parent viewContent = fxmlLoader.load();
 
         // Ensuite, on la place dans une Scene...
-        Scene scene = new Scene(viewContent);
+        Scene scene = new Scene(viewContent, 320, 240);
         // que l'on place elle-même dans la fenêtre.
         stage.setScene(scene);
 
