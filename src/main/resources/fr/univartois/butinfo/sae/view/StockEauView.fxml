@@ -19,6 +19,7 @@
                 <Button text="Ajouter" onAction="#ajouterStock"/>
                 <Button text="Modifier" onAction="#modifierStock"/>
                 <Button text="Supprimer" onAction="#supprimerStock"/>
+                <Button text="Revenir à l'accueil de l'application" onAction="#onClickButtonMainPage"/>
             </HBox>
         </VBox>
     </left>

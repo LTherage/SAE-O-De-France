@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.univartois.butinfo.sae.controller.FormulaireClientController"
+      spacing="10" alignment="TOP_LEFT">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Choix du type client -->
+    <ChoiceBox fx:id="choiceTypeClient"/>
+
+    <!-- Champs spécifiques pour PARTICULIER / ENTREPRISE -->
+    <TextField fx:id="champNom" promptText="Nom" visible="false"/>
+    <TextField fx:id="champPrenom" promptText="Prénom" visible="false"/>
+
+    <!-- Champs spécifiques pour ETABLISSEMENT_PUBLIC -->
+    <TextField fx:id="champNomEtablissement" promptText="Nom de l'établissement" visible="false"/>
+    <ChoiceBox fx:id="choiceTypeEtablissement" visible="false"/>
+
+    <!-- Champs adresse -->
+    <TextField fx:id="champAdresse" promptText="Numéro et voie (ex: 12 rue des Lilas)"/>
+    <TextField fx:id="champNomCommune" promptText="Nom de la commune"/>
+    <TextField fx:id="champCodePostal" promptText="Code postal"/>
+    <TextField fx:id="champDepartement" promptText="Département"/>
+
+    <!-- Champs communs -->
+    <TextField fx:id="champTelephone" promptText="Téléphone"/>
+    <TextField fx:id="champEmail" promptText="Email"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Valider" onAction="#valider"/>
+        <Button text="Annuler" onAction="#annuler"/>
+        <Button text="Quitter l'application" onAction="#onClickButtonMainPage"/>
+    </HBox>
+</VBox>

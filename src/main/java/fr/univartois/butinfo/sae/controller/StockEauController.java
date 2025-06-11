@@ -1,20 +1,10 @@
 package fr.univartois.butinfo.sae.controller;
 
 import fr.univartois.butinfo.sae.model.StockEau;
-import fr.univartois.butinfo.sae.model.Entrepot;
-import fr.univartois.butinfo.sae.model.Adresse;
-import fr.univartois.butinfo.sae.model.Commune;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class StockEauController {
 
@@ -25,10 +15,6 @@ public class StockEauController {
     @FXML
     private Label entrepotLabel;
     @FXML
-    private Label adresseLabel;
-    @FXML
-    private Label communeLabel;
-    @FXML
     private Label quantiteLabel;
 
     private final ObservableList<StockEau> stockList = FXCollections.observableArrayList();
@@ -36,102 +22,38 @@ public class StockEauController {
     @FXML
     public void initialize() {
         waterListView.setItems(stockList);
-
-        // Cellule personnalisée pour afficher plus d'infos dans la liste
         waterListView.setCellFactory(list -> new ListCell<>() {
             @Override
             protected void updateItem(StockEau item, boolean empty) {
                 super.updateItem(item, empty);
-                if (empty || item == null) {
-                    setText(null);
-                } else {
-                    Entrepot entrepot = item.getEntrepot();
-                    String entrepotInfo = (entrepot != null) ? entrepot.getNom() + " (Code: " + entrepot.getCode() + ")" : "Entrepôt inconnu";
-                    setText(item.getCategorie() + " - " + entrepotInfo + " - Qté: " + item.getQuantite());
-                }
+                setText((empty || item == null) ? null : item.getCategorie() + " - " + item.getEntrepot());
             }
         });
 
-        // Affiche les détails quand on sélectionne un élément dans la liste
         waterListView.getSelectionModel().selectedItemProperty().addListener(
-                (obs, oldSelection, newSelection) -> afficherDetails(newSelection)
-        );
+                (obs, oldSelection, newSelection) -> afficherDetails(newSelection));
     }
 
     private void afficherDetails(StockEau stock) {
         if (stock != null) {
             categorieLabel.setText("Catégorie : " + stock.getCategorie());
+            entrepotLabel.setText("Entrepôt : " + stock.getEntrepot());
             quantiteLabel.setText("Quantité : " + stock.getQuantite());
-
-            Entrepot entrepot = stock.getEntrepot();
-            if (entrepot != null) {
-                entrepotLabel.setText("Entrepôt : " + entrepot.getNom() + " (Code: " + entrepot.getCode() + ")");
-
-                Adresse adresse = entrepot.getAdresse();
-                if (adresse != null) {
-                    adresseLabel.setText("Adresse : " + adresse.getNumero() + " " + adresse.getVoie());
-
-                    Commune commune = adresse.getCommune();
-                    if (commune != null) {
-                        communeLabel.setText("Commune : " + commune.getNom() + " (Code: " + commune.getCode() + "), Département : " + commune.getDepartement());
-                    } else {
-                        communeLabel.setText("Commune : inconnue");
-                    }
-                } else {
-                    adresseLabel.setText("Adresse : inconnue");
-                    communeLabel.setText("Commune : inconnue");
-                }
-            } else {
-                entrepotLabel.setText("Entrepôt : inconnu");
-                adresseLabel.setText("Adresse : inconnue");
-                communeLabel.setText("Commune : inconnue");
-            }
         } else {
-            // Réinitialiser les labels si aucune sélection
             categorieLabel.setText("");
             entrepotLabel.setText("");
-            adresseLabel.setText("");
-            communeLabel.setText("");
             quantiteLabel.setText("");
         }
     }
 
     @FXML
     private void ajouterStock() {
-        StockEau newStock = new StockEau();
-        stockList.add(newStock);
-        ouvrirFenetreStock(newStock);
+        return;
     }
 
     @FXML
     private void modifierStock() {
-        StockEau selected = waterListView.getSelectionModel().getSelectedItem();
-        if (selected != null) {
-            ouvrirFenetreStock(selected);
-        }
-    }
-
-    private void ouvrirFenetreStock(StockEau stock) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/StockEauAjout&ModifView.fxml"));
-            Parent root = loader.load();
-
-            StockEauAjoutModifController controller = loader.getController();
-            controller.setStock(stock);
-
-            Stage dialogStage = new Stage();
-            dialogStage.setTitle("Ajouter / Modifier un Stock d'eau");
-            dialogStage.initOwner(waterListView.getScene().getWindow());
-            dialogStage.initModality(Modality.WINDOW_MODAL); // bloque la fenêtre principale
-            dialogStage.setScene(new Scene(root));
-            dialogStage.showAndWait();
-
-            waterListView.refresh();
-            afficherDetails(stock); // mettre à jour l'affichage des détails après modif
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        return;
     }
 
     @FXML

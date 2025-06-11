@@ -11,14 +11,8 @@
         <HBox spacing="20" >
             <ListView fx:id="listeClients" />
             <VBox spacing="10" alignment="TOP_LEFT">
-                <Label text="Nom complet :" />
-                <Label fx:id="labelNom" text="-" />
-
-                <Label text="Type de client :" />
-                <Label fx:id="labelType" text="-" />
-
-                <Label text="Points fidélité :" />
-                <Label fx:id="labelPoints" text="-" />
+                <Label text="Information :" />
+                <Label fx:id="labelInfo" text="-" />
             </VBox>
         </HBox>
     </center>
@@ -28,8 +22,11 @@
             <padding>
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
+            <Button text="Revenir à l'accueil de l'application" onAction="#onClickButtonMainPage"/>
             <Button text="Ajouter" onAction="#ajouterClient" />
             <Button text="Modifier" onAction="#modifierClient" />
+            <Button text="Supprimer" onAction="#supprimerClient" />
+
         </HBox>
     </bottom>
 
