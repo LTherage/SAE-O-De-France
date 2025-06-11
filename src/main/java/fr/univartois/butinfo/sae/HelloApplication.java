@@ -45,7 +45,7 @@ public class HelloApplication extends Application {
         Parent viewContent = fxmlLoader.load();
 
         // Ensuite, on la place dans une Scene...
-        Scene scene = new Scene(viewContent, 320, 240);
+        Scene scene = new Scene(viewContent);
         // que l'on place elle-même dans la fenêtre.
         stage.setScene(scene);
 
