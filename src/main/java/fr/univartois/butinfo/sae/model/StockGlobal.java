@@ -1,6 +1,7 @@
 package fr.univartois.butinfo.sae.model;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class StockGlobal {
     private final StockEau[] stocks;
@@ -10,6 +11,12 @@ public class StockGlobal {
         stocks = new StockEau[50];
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        StockGlobal that = (StockGlobal) o;
+        return last == that.last && Objects.deepEquals(stocks, that.stocks);
+    }
     public void add(StockEau stock) {
         int index;
 

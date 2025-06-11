@@ -53,13 +53,10 @@ public abstract class Client {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Client client)) return false;
-        return getCode() == client.getCode();
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return code == client.code && pointsFidelite == client.pointsFidelite && Objects.equals(dateInscription, client.dateInscription) && Objects.equals(adresse, client.adresse) && Objects.equals(telephone, client.telephone) && Objects.equals(email, client.email);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getCode());
-    }
+
 }

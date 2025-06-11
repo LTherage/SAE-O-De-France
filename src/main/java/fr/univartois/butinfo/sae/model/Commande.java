@@ -6,6 +6,7 @@ import javafx.collections.transformation.SortedList;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Commande implements RemisesPossibles {
     private final int id;
@@ -73,5 +74,12 @@ public class Commande implements RemisesPossibles {
 
     public ObservableList<LigneDeCommande> getLignesDeCommande() {
         return lignesDeCommande;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Commande commande = (Commande) o;
+        return id == commande.id && Objects.equals(lignesDeCommande, commande.lignesDeCommande) && Objects.equals(client, commande.client);
     }
 }

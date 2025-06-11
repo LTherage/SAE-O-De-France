@@ -6,22 +6,17 @@ import java.util.Objects;
 public class StockEau {
     private Categorie categorie;
     private Entrepot entrepot;
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        StockEau stockEau = (StockEau) o;
+        return quantite == stockEau.quantite && categorie == stockEau.categorie && Objects.equals(entrepot, stockEau.entrepot);
+    }
     /**
      * Le nombre de caisses de bouteilles.
      */
     private int quantite;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof StockEau stockEau)) return false;
-        return categorie == stockEau.categorie && Objects.equals(entrepot, stockEau.entrepot);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(categorie, entrepot);
-    }
 
     public Categorie getCategorie() {
         return categorie;

@@ -39,15 +39,12 @@ public class Adresse {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Adresse adresse)) return false;
-        return getNumero() == adresse.getNumero() && Objects.equals(getVoie(), adresse.getVoie()) && Objects.equals(getCommune(), adresse.getCommune());
+        if (o == null || getClass() != o.getClass()) return false;
+        Adresse adresse = (Adresse) o;
+        return numero == adresse.numero && Objects.equals(voie, adresse.voie) && Objects.equals(commune, adresse.commune);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getNumero(), getVoie(), getCommune());
-    }
+
 
     @Override
     public String toString() {
