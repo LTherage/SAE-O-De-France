@@ -29,3 +29,4 @@
 
 ## Configuration
 - Ajout des dépendances nécessaires au projet (Thérage Ludovic - c371c705)
+- Création et modification du style.css (Thérage Ludovic + Popieul Mathéo - commit récent)
