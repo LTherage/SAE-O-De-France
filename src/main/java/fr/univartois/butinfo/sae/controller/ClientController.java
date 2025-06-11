@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
@@ -30,6 +31,32 @@ public class ClientController {
     public void initialize() {
         listeClients.setItems(clients);
 
+        listeClients.setCellFactory(lv -> new ListCell<>() {
+            @Override
+            protected void updateItem(Client client, boolean empty) {
+                super.updateItem(client, empty);
+                if (empty || client == null) {
+                    setText(null);
+                } else {
+                    switch (client.getTypeClient()) {
+                        case "Particulier" -> {
+                            ClientParticulier cp = (ClientParticulier) client;
+                            setText(cp.getNom() + " " + cp.getPrenom() + " (Particulier)");
+                        }
+                        case "Entreprise" -> {
+                            ClientEntreprise ce = (ClientEntreprise) client;
+                            setText(ce.getNom() + " " + ce.getPrenom() + " (Entreprise)");
+                        }
+                        case "Établissement public" -> {
+                            ClientEtablissementPublic cep = (ClientEtablissementPublic) client;
+                            setText(cep.getNom() + " (Établissement public)");
+                        }
+                        default -> setText(client.toString());
+                    }
+                }
+            }
+        });
+
         listeClients.getSelectionModel().selectedItemProperty().addListener((obs, ancien, nouveau) -> {
             if (nouveau != null) {
                 String info = "";
@@ -39,29 +66,41 @@ public class ClientController {
                     case "Particulier" -> {
                         ClientParticulier cp = (ClientParticulier) nouveau;
                         info = "Type : Particulier\n" +
-                            "Nom : " + cp.getNom() + "\n" +
-                            "Prénom : " + cp.getPrenom() + "\n" +
-                            "Téléphone : " + cp.getTelephone() + "\n" +
-                            "Email : " + cp.getEmail() + "\n" +
-                            "Adresse : " + (cp.getAdresse() != null ? cp.getAdresse().toString() : "N/A");
+                                "Nom : " + cp.getNom() + "\n" +
+                                "Prénom : " + cp.getPrenom() + "\n" +
+                                "Téléphone : " + cp.getTelephone() + "\n" +
+                                "Email : " + cp.getEmail() + "\n" +
+                                "Adresse : " + (cp.getAdresse() != null ?
+                                cp.getAdresse().getNumero() + " " +
+                                        cp.getAdresse().getVoie() + ", " +
+                                        cp.getAdresse().getCommune().getCode() + " " +
+                                        cp.getAdresse().getCommune().getNom() : "N/A");
                     }
                     case "Entreprise" -> {
                         ClientEntreprise ce = (ClientEntreprise) nouveau;
                         info = "Type : Entreprise\n" +
-                            "Nom : " + ce.getNom() + "\n" +
-                            "Prénom : " + ce.getPrenom() + "\n" +
-                            "Téléphone : " + ce.getTelephone() + "\n" +
-                            "Email : " + ce.getEmail() + "\n" +
-                            "Adresse : " + (ce.getAdresse() != null ? ce.getAdresse().toString() : "N/A");
+                                "Nom : " + ce.getNom() + "\n" +
+                                "Prénom : " + ce.getPrenom() + "\n" +
+                                "Téléphone : " + ce.getTelephone() + "\n" +
+                                "Email : " + ce.getEmail() + "\n" +
+                                "Adresse : " + (ce.getAdresse() != null ?
+                                ce.getAdresse().getNumero() + " " +
+                                        ce.getAdresse().getVoie() + ", " +
+                                        ce.getAdresse().getCommune().getCode() + " " +
+                                        ce.getAdresse().getCommune().getNom() : "N/A");
                     }
                     case "Établissement public" -> {
                         ClientEtablissementPublic cep = (ClientEtablissementPublic) nouveau;
                         info = "Type : Établissement Public\n" +
-                            "Nom : " + cep.getNom() + "\n" +
-                            "Type Établissement : " + (cep.getType() != null ? cep.getType().toString() : "N/A") + "\n" +
-                            "Téléphone : " + cep.getTelephone() + "\n" +
-                            "Email : " + cep.getEmail() + "\n" +
-                            "Adresse : " + (cep.getAdresse() != null ? cep.getAdresse().toString() : "N/A");
+                                "Nom : " + cep.getNom() + "\n" +
+                                "Type Établissement : " + (cep.getType() != null ? cep.getType().toString() : "N/A") + "\n" +
+                                "Téléphone : " + cep.getTelephone() + "\n" +
+                                "Email : " + cep.getEmail() + "\n" +
+                                "Adresse : " + (cep.getAdresse() != null ?
+                                cep.getAdresse().getNumero() + " " +
+                                        cep.getAdresse().getVoie() + ", " +
+                                        cep.getAdresse().getCommune().getCode() + " " +
+                                        cep.getAdresse().getCommune().getNom() : "N/A");
                     }
                     default -> info = "Type de client inconnu.";
                 }
