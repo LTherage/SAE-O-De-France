@@ -9,7 +9,6 @@ import java.util.List;
 
 public class Commande implements RemisesPossibles {
     private final int id;
-    private static int essaie =20;
 
     private static int nextId = 0;
     private final ObservableList<LigneDeCommande> lignesDeCommande;
