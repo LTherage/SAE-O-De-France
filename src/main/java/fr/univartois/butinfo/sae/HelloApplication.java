@@ -41,16 +41,16 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Il faut d'abord récupérer la description de la vue (au format FXML).
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/Client-view.fxml"));
         Parent viewContent = fxmlLoader.load();
 
         // Ensuite, on la place dans une Scene...
-        Scene scene = new Scene(viewContent, 320, 240);
+        Scene scene = new Scene(viewContent, 600, 600);
         // que l'on place elle-même dans la fenêtre.
         stage.setScene(scene);
 
         // On peut ensuite donner un titre à la fenêtre.
-        stage.setTitle("Hello!");
+        stage.setTitle("Client");
 
         // Enfin, on affiche la fenêtre.
         stage.show();
