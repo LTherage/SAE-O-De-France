@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="fr.univartois.butinfo.sae.controller.CommandeController">
+
+    <center>
+        <HBox spacing="20" >
+            <ListView fx:id="listeCommandes" />
+            <VBox spacing="10" alignment="TOP_LEFT">
+                <Label text="Nom de la personne :" />
+                <Label fx:id="labelNom" text="-" />
+
+                <Label text="ID de la commande :" />
+                <Label fx:id="labelCommande" text="-" />
+
+                <Label text="Adresse de la commande :" />
+                <Label fx:id="labelAdresse" text="-" />
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Ajouter" onAction="#ajouterCommande" />
+            <Button text="Modifier" onAction="#modifierCommande" />
+            <Button text="Supprimer" onAction="#supprimerCommande" />
+            <Button text="quitter l'application" onAction="#quitterApp" />
+        </HBox>
+    </bottom>
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15" />
+    </padding>
+</BorderPane>
