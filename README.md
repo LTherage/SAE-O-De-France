@@ -24,7 +24,9 @@
 - Nettoyage du code de débogage (Thérage Ludovic - 2f583eb5)
 - Ajout de nouveaux tests unitaires (Ugo Dassonville - 43dedb91)
 - Documentation JavaDoc des contrôleurs (Thérage Ludovic - commit récent)
+- Ajout d'un nouveaux tests toString() dans la classe EauTest (Popieul Matheo - 8035aed7)
 
 
 ## Configuration
 - Ajout des dépendances nécessaires au projet (Thérage Ludovic - c371c705)
+- Création et modification du style.css (Thérage Ludovic + Popieul Mathéo - commit récent)
