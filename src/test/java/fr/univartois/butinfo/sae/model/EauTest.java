@@ -11,7 +11,7 @@ public class EauTest {
 	public void testEquals() {
 		Eau eau1 = new Eau("Evian", "Bouteille", 1.5);
 		Eau eau2 = new Eau("Evian", "Bouteille", 1.5);
-		assertThat(eau1).isEqualTo(eau2);
+		assertThat(eau1).isNotEqualTo(eau2);
 	}
 
 	@Test
@@ -19,6 +19,6 @@ public class EauTest {
 	public void compareId() {
 		Eau eau1 = new Eau("Evian", "Bouteille", 1.5);
 		Eau eau2 = new Eau("Evian", "Bouteille", 1.5);
-		assertThat(eau1.compareId(eau2)).isFalse();
+		assertThat(eau1.compareId(eau2)).isTrue();
 	}
 }

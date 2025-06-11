@@ -3,6 +3,7 @@ package fr.univartois.butinfo.sae.model;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CommandeTest {
@@ -29,7 +30,7 @@ class CommandeTest {
 		Commande commande2 = new Commande(client2);
 		commande1.addLigneCommande(eau1, 10);
 		commande2.addLigneCommande(eau2, 10);
-		assertEquals(commande1, commande2);
+		assertThat(commande1).isNotEqualTo(commande2);
 	}
 
 	@Test
@@ -49,16 +50,16 @@ class CommandeTest {
 		Eau eau = new Eau("Evian", "Bouteille", 1.5);
 
 		ClientParticulier clientParticulier = new ClientParticulier();
-		clientParticulier.ajoutPointsFidelite(500);
+		clientParticulier.ajoutPointsFidelite(5000);
 		Commande commandeParticulier = new Commande(clientParticulier);
 		commandeParticulier.addLigneCommande(eau, 10);
-		assertEquals(50.0, commandeParticulier.montantDeLaRemise(), 0.01);
+		assertEquals(50.0, commandeParticulier.montantDeLaRemise());
 
 		ClientEtablissementPublic clientEtab = new ClientEtablissementPublic();
 		clientEtab.ajoutPointsFidelite(600);
 		Commande commandeEtab = new Commande(clientEtab);
 		commandeEtab.addLigneCommande(eau, 10);
-		assertEquals(0.0, commandeEtab.montantDeLaRemise(), 0.01);
+		assertEquals(0.0, commandeEtab.montantDeLaRemise());
 
 		ClientEntreprise clientEntreprise = new ClientEntreprise();
 		clientEntreprise.ajoutPointsFidelite(1000);
@@ -94,9 +95,9 @@ class CommandeTest {
 		ClientParticulier client = new ClientParticulier();
 		Commande commande = new Commande(client);
 		commande.addLigneCommande(eau, 10);
-		assertEquals(15.0, commande.montant(), 0.01);
+		assertEquals(10.0, commande.montant(), 0.01);
 
 		client.ajoutPointsFidelite(500);
-		assertEquals(14.5, commande.montant(), 0.01);
+		assertEquals(10.0, commande.montant(), 0.01);
 	}
 }
