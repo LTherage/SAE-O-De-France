@@ -120,7 +120,7 @@ public class ClientController {
             Parent root = loader.load();
 
             FormulaireClientController controller = loader.getController();
-            controller.setClients(listeClients.getItems());
+            controller.setClients(clients);
             controller.setListView(listeClients);
 
             Stage stage = new Stage();
@@ -135,8 +135,31 @@ public class ClientController {
 
     @FXML
     public void modifierClient() {
-       //
+        Client client = listeClients.getSelectionModel().getSelectedItem();
+        if (client == null) return;
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml"));
+            Parent root = loader.load();
+
+            FormulaireClientController controller = loader.getController();
+            controller.setClients(listeClients.getItems());
+            controller.setListView(listeClients);
+            controller.setClientAModifier(client);
+
+            Stage stage = new Stage();
+            stage.setTitle("Modifier client");
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+
+            listeClients.refresh();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
     @FXML
     public void supprimerClient() {

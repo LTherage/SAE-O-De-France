@@ -78,18 +78,19 @@ public class FormulaireClientController {
 		this.listView = listView;
 	}
 
+	private Client clientAModifier;
+
+
 	@FXML
 	public void valider() {
 		TypeClient type = choiceTypeClient.getValue();
 		if (type == null) {
-			// Ajouter gestion erreur (message utilisateur)
 			return;
 		}
 
 		String tel = champTelephone.getText();
 		String mail = champEmail.getText();
 
-		// Adresse parsing
 		String adresseStr = champAdresse.getText();
 		int numero = 0;
 		String voie = "";
@@ -98,8 +99,8 @@ public class FormulaireClientController {
 			try {
 				numero = Integer.parseInt(parts[0]);
 				voie = parts[1];
-			} catch (NumberFormatException e) {
-				// gérer erreur (par exemple afficher un message)
+			} catch (NumberFormatException ignore) {
+
 			}
 		}
 
@@ -110,40 +111,102 @@ public class FormulaireClientController {
 		Commune commune = new Commune(nomCommune, codePostal, departement);
 		Adresse adresse = new Adresse(numero, voie, commune);
 
-		Client nouveauClient = null;
+		if (clientAModifier != null) {
+			clientAModifier.setTelephone(tel);
+			clientAModifier.setEmail(mail);
+			clientAModifier.setAdresse(adresse);
 
-		switch (type) {
-			case PARTICULIER -> {
-				ClientParticulier cp = new ClientParticulier();
-				cp.setNom(champNom.getText());
-				cp.setPrenom(champPrenom.getText());
-				cp.setAdresse(adresse);
-				nouveauClient = cp;
+			switch (type) {
+				case PARTICULIER -> {
+					if (clientAModifier instanceof ClientParticulier cp) {
+						cp.setNom(champNom.getText());
+						cp.setPrenom(champPrenom.getText());
+					}
+				}
+				case ENTREPRISE -> {
+					if (clientAModifier instanceof ClientEntreprise ce) {
+						ce.setNom(champNom.getText());
+						ce.setPrenom(champPrenom.getText());
+					}
+				}
+				case ETABLISSEMENT_PUBLIC -> {
+					if (clientAModifier instanceof ClientEtablissementPublic cep) {
+						cep.setNom(champNomEtablissement.getText());
+						cep.setType(choiceTypeEtablissement.getValue());
+					}
+				}
 			}
-			case ENTREPRISE -> {
-				ClientEntreprise ce = new ClientEntreprise();
-				ce.setNom(champNom.getText());
-				ce.setPrenom(champPrenom.getText());
-				ce.setAdresse(adresse);
-				nouveauClient = ce;
+		} else {
+			// Mode création : on crée un nouveau client
+			Client nouveauClient = null;
+
+			switch (type) {
+				case PARTICULIER -> {
+					ClientParticulier cp = new ClientParticulier();
+					cp.setNom(champNom.getText());
+					cp.setPrenom(champPrenom.getText());
+					cp.setAdresse(adresse);
+					nouveauClient = cp;
+				}
+				case ENTREPRISE -> {
+					ClientEntreprise ce = new ClientEntreprise();
+					ce.setNom(champNom.getText());
+					ce.setPrenom(champPrenom.getText());
+					ce.setAdresse(adresse);
+					nouveauClient = ce;
+				}
+				case ETABLISSEMENT_PUBLIC -> {
+					ClientEtablissementPublic cep = new ClientEtablissementPublic();
+					cep.setNom(champNomEtablissement.getText());
+					cep.setType(choiceTypeEtablissement.getValue());
+					cep.setAdresse(adresse);
+					nouveauClient = cep;
+				}
 			}
-			case ETABLISSEMENT_PUBLIC -> {
-				ClientEtablissementPublic cep = new ClientEtablissementPublic();
-				cep.setNom(champNomEtablissement.getText());
-				cep.setType(choiceTypeEtablissement.getValue());
-				cep.setAdresse(adresse);
-				nouveauClient = cep;
+
+			if (nouveauClient != null) {
+				nouveauClient.setTelephone(tel);
+				nouveauClient.setEmail(mail);
+				clients.add(nouveauClient);
 			}
 		}
 
-		if (nouveauClient != null) {
-			nouveauClient.setTelephone(tel);
-			nouveauClient.setEmail(mail);
-			clients.add(nouveauClient);
-			if (listView != null) listView.refresh();
-			champTelephone.getScene().getWindow().hide();
+		if (listView != null) listView.refresh();
+		champTelephone.getScene().getWindow().hide();
+	}
+
+
+	public void setClientAModifier(Client client) {
+		this.clientAModifier = client;
+
+		if (client == null) return;
+
+		if (client instanceof ClientParticulier) {
+			choiceTypeClient.setValue(TypeClient.PARTICULIER);
+			champNom.setText(((ClientParticulier) client).getNom());
+			champPrenom.setText(((ClientParticulier) client).getPrenom());
+		} else if (client instanceof ClientEntreprise) {
+			choiceTypeClient.setValue(TypeClient.ENTREPRISE);
+			champNom.setText(((ClientEntreprise) client).getNom());
+			champPrenom.setText(((ClientEntreprise) client).getPrenom());
+		} else if (client instanceof ClientEtablissementPublic) {
+			choiceTypeClient.setValue(TypeClient.ETABLISSEMENT_PUBLIC);
+			champNomEtablissement.setText(((ClientEtablissementPublic) client).getNom());
+			choiceTypeEtablissement.setValue((TypeEtablissement) ((ClientEtablissementPublic) client).getType());
+
+		}
+
+		champTelephone.setText(client.getTelephone());
+		champEmail.setText(client.getEmail());
+
+		if (client.getAdresse() != null) {
+			champAdresse.setText(client.getAdresse().getNumero() + " " + client.getAdresse().getVoie());
+			champNomCommune.setText(client.getAdresse().getCommune().getNom());
+			champCodePostal.setText(client.getAdresse().getCommune().getCode());
+			champDepartement.setText(client.getAdresse().getCommune().getDepartement());
 		}
 	}
+
 
 	@FXML
 	public void annuler() {
@@ -169,4 +232,7 @@ public class FormulaireClientController {
 		Stage stage = (Stage) button.getScene().getWindow();
 		changerVue(stage, "view/Accueil-view.fxml");
 	}
+
+
+
 }
