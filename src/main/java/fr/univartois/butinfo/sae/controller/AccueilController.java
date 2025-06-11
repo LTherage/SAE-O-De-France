@@ -11,11 +11,24 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Contrôleur JavaFX pour la page d'accueil de l'application.
+ * Permet la navigation vers les différentes vues (clients, commandes, stock d'eau, accueil).
+ */
 public class AccueilController {
 
+    /**
+     * Bouton permettant d'accéder à la gestion des clients.
+     */
     @FXML
     private Button connexion;
 
+    /**
+     * Change la vue affichée dans la fenêtre principale.
+     *
+     * @param stage La fenêtre principale.
+     * @param fxml  Le chemin du fichier FXML à charger.
+     */
     public static void changerVue(Stage stage, String fxml) {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxml));
@@ -27,6 +40,9 @@ public class AccueilController {
         }
     }
 
+    /**
+     * Gère le clic sur le bouton "Clients" et affiche la vue correspondante.
+     */
     @FXML
     private void client() {
         System.out.println("Bouton : Application pour les clients");
@@ -34,6 +50,9 @@ public class AccueilController {
         changerVue(stage, "view/Client-view.fxml");
     }
 
+    /**
+     * Gère le clic sur le bouton "Stock d'eau" et affiche la vue correspondante.
+     */
     @FXML
     private void StockEau() {
         System.out.println("Bouton : Application pour les clients");
@@ -41,13 +60,20 @@ public class AccueilController {
         changerVue(stage, "view/StockEauView.fxml");
     }
 
+    /**
+     * Gère le clic sur le bouton "Commandes" et affiche la vue correspondante.
+     */
     @FXML
     private void commande() {
         Stage stage = (Stage) connexion.getScene().getWindow();
         changerVue(stage, "view/Commande-view.fxml");
     }
 
-
+    /**
+     * Gère le retour à la page d'accueil lors du clic sur le bouton correspondant.
+     *
+     * @param event L'événement de clic.
+     */
     @FXML
     private void onClickButtonMainPage(ActionEvent event) {
         // Obtenir le bouton qui a déclenché l'événement

@@ -11,29 +11,51 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Contrôleur JavaFX pour le formulaire d'ajout ou de modification d'un stock d'eau.
+ * Permet de saisir ou modifier les informations d'un stock, d'un entrepôt et de son adresse.
+ */
 public class StockEauAjoutModifController {
 
+    /** Champ de saisie du code de la commune. */
     @FXML private TextField communeCodeField;
+    /** Champ de saisie du nom de la commune. */
     @FXML private TextField communeNomField;
+    /** Champ de saisie du département de la commune. */
     @FXML private TextField communeDepartementField;
 
+    /** ComboBox pour sélectionner la catégorie d'eau. */
     @FXML private ComboBox<Categorie> categorieComboBox;
+    /** Champ de saisie de la quantité d'eau. */
     @FXML private TextField quantiteTextField;
+    /** Champ de saisie du code de l'entrepôt. */
     @FXML private TextField codeEntrepotField;
+    /** Champ de saisie du nom de l'entrepôt. */
     @FXML private TextField nomEntrepotField;
+    /** Champ de saisie du numéro d'adresse de l'entrepôt. */
     @FXML private TextField numeroAdresseField;
+    /** Champ de saisie de la voie de l'adresse de l'entrepôt. */
     @FXML private TextField voieAdresseField;
 
+    /** Stock d'eau à modifier ou à créer. */
     private StockEau stock;
 
+    /**
+     * Initialise le contrôleur après le chargement du FXML.
+     * Remplit la ComboBox des catégories d'eau.
+     */
     @FXML
     private void initialize() {
         categorieComboBox.setItems(FXCollections.observableArrayList(Categorie.values()));
     }
 
+    /**
+     * Définit le stock d'eau à modifier et pré-remplit les champs du formulaire.
+     * @param stock Le stock d'eau à modifier.
+     */
     public void setStock(StockEau stock) {
         this.stock = stock;
-
+        // Pré-remplissage des champs si stock non nul
         if (stock != null) {
             categorieComboBox.setValue(stock.getCategorie());
             quantiteTextField.setText(String.valueOf(stock.getQuantite()));
@@ -59,6 +81,11 @@ public class StockEauAjoutModifController {
         }
     }
 
+    /**
+     * Valide le formulaire, met à jour le stock d'eau avec les valeurs saisies,
+     * et ferme la fenêtre si la saisie est correcte.
+     * Affiche un message d'erreur en cas de saisie invalide.
+     */
     @FXML
     private void onValider() {
         if (stock == null) return;

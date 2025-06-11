@@ -15,45 +15,68 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * Contrôleur JavaFX pour le formulaire d'ajout ou de modification d'un client.
+ * Permet de saisir ou modifier les informations d'un client (particulier, entreprise ou établissement public).
+ */
 public class FormulaireClientController {
+	/** Liste observable des clients à mettre à jour après ajout ou modification. */
 
 	private ObservableList<Client> clients;
+	/** ListView associée à la liste des clients (pour rafraîchir l'affichage). */
+
 	private ListView<Client> listView;
+	/** Choix du type de client (particulier, entreprise, établissement public). */
 
 	@FXML
 	private ChoiceBox<TypeClient> choiceTypeClient;
+	/** Champ de saisie du téléphone. */
 
 	@FXML
 	private TextField champTelephone;
+	/** Champ de saisie de l'email. */
 
 	@FXML
 	private TextField champEmail;
+	/** Champ de saisie du nom (particulier ou entreprise). */
 
 	@FXML
 	private TextField champNom;
+	/** Champ de saisie du prénom (particulier ou entreprise). */
 
 	@FXML
 	private TextField champPrenom;
+	/** Champ de saisie du nom de l'établissement (établissement public). */
 
 	@FXML
 	private TextField champNomEtablissement;
+	/** Choix du type d'établissement (établissement public). */
 
 	@FXML
 	private ChoiceBox<TypeEtablissement> choiceTypeEtablissement;
+	/** Champ de saisie de l'adresse (numéro et voie). */
 
 	@FXML
 	private TextField champAdresse;
+	/** Champ de saisie du nom de la commune. */
 
 	@FXML
 	private TextField champNomCommune;
+	/** Champ de saisie du code postal. */
 
 	@FXML
 	private TextField champCodePostal;
+	/** Champ de saisie du département. */
 
 	@FXML
 	private TextField champDepartement;
+	/** Client à modifier (null si création). */
+	private Client clientAModifier;
 
+	/**
+	 * Initialise le contrôleur après le chargement du FXML.
+	 * Configure les choix disponibles et l'affichage dynamique des champs selon le type de client.
+	 */
 	@FXML
 	public void initialize() {
 		choiceTypeClient.getItems().addAll(TypeClient.values());
@@ -70,17 +93,26 @@ public class FormulaireClientController {
 		});
 	}
 
+	/**
+	 * Définit la liste observable des clients à mettre à jour.
+	 * @param clients Liste observable des clients.
+	 */
 	public void setClients(ObservableList<Client> clients) {
 		this.clients = clients;
 	}
-
+	/**
+	 * Définit la ListView associée à la liste des clients.
+	 * @param listView ListView à rafraîchir après ajout ou modification.
+	 */
 	public void setListView(ListView<Client> listView) {
 		this.listView = listView;
 	}
 
-	private Client clientAModifier;
 
-
+	/**
+	 * Valide le formulaire, crée ou modifie un client selon le contexte,
+	 * met à jour la liste et ferme la fenêtre.
+	 */
 	@FXML
 	public void valider() {
 		TypeClient type = choiceTypeClient.getValue();
@@ -175,7 +207,10 @@ public class FormulaireClientController {
 		champTelephone.getScene().getWindow().hide();
 	}
 
-
+	/**
+	 * Pré-remplit le formulaire avec les informations du client à modifier.
+	 * @param client Le client à modifier.
+	 */
 	public void setClientAModifier(Client client) {
 		this.clientAModifier = client;
 
@@ -207,12 +242,18 @@ public class FormulaireClientController {
 		}
 	}
 
-
+	/**
+	 * Annule la saisie et ferme la fenêtre du formulaire.
+	 */
 	@FXML
 	public void annuler() {
 		champTelephone.getScene().getWindow().hide();
 	}
-
+	/**
+	 * Change la vue affichée dans la fenêtre principale.
+	 * @param stage La fenêtre principale.
+	 * @param fxml  Le chemin du fichier FXML à charger.
+	 */
 	public static void changerVue(Stage stage, String fxml) {
 		try {
 			FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxml));
@@ -223,7 +264,10 @@ public class FormulaireClientController {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * Gère le retour à la page d'accueil lors du clic sur le bouton correspondant.
+	 * @param event L'événement de clic.
+	 */
 	@FXML
 	private void onClickButtonMainPage(ActionEvent event) {
 		// Obtenir le bouton qui a déclenché l'événement

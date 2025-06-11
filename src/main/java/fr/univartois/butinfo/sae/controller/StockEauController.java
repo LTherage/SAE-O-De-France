@@ -17,24 +17,39 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * Contrôleur JavaFX pour la gestion des stocks d'eau.
+ * Permet d'afficher, ajouter, modifier, supprimer des stocks et de consulter leurs détails.
+ */
 public class StockEauController {
-
+    /** ListView affichant la liste des stocks d'eau. */
     @FXML
     private ListView<StockEau> waterListView;
+    /** Label affichant la catégorie du stock sélectionné. */
     @FXML
     private Label categorieLabel;
+    /** Label affichant l'entrepôt du stock sélectionné. */
     @FXML
     private Label entrepotLabel;
+    /** Label affichant l'adresse de l'entrepôt du stock sélectionné. */
+
     @FXML
     private Label adresseLabel;
+    /** Label affichant la commune de l'entrepôt du stock sélectionné. */
+
     @FXML
     private Label communeLabel;
+    /** Label affichant la quantité du stock sélectionné. */
+
     @FXML
     private Label quantiteLabel;
+    /** Liste observable contenant les stocks d'eau. */
 
     private final ObservableList<StockEau> stockList = FXCollections.observableArrayList();
-
+    /**
+     * Initialise le contrôleur après le chargement du FXML.
+     * Configure la ListView et l'affichage des détails.
+     */
     @FXML
     public void initialize() {
         waterListView.setItems(stockList);
@@ -59,7 +74,10 @@ public class StockEauController {
                 (obs, oldSelection, newSelection) -> afficherDetails(newSelection)
         );
     }
-
+    /**
+     * Affiche les détails du stock sélectionné dans les labels.
+     * @param stock Le stock sélectionné.
+     */
     private void afficherDetails(StockEau stock) {
         if (stock != null) {
             categorieLabel.setText("Catégorie : " + stock.getCategorie());
@@ -98,13 +116,18 @@ public class StockEauController {
         }
     }
 
+    /**
+     * Ajoute un nouveau stock d'eau et ouvre la fenêtre d'édition.
+     */
     @FXML
     private void ajouterStock() {
         StockEau newStock = new StockEau();
         stockList.add(newStock);
         ouvrirFenetreStock(newStock);
     }
-
+    /**
+     * Modifie le stock d'eau sélectionné en ouvrant la fenêtre d'édition.
+     */
     @FXML
     private void modifierStock() {
         StockEau selected = waterListView.getSelectionModel().getSelectedItem();
@@ -113,6 +136,10 @@ public class StockEauController {
         }
     }
 
+    /**
+     * Ouvre la fenêtre modale pour ajouter ou modifier un stock d'eau.
+     * @param stock Le stock à éditer.
+     */
     private void ouvrirFenetreStock(StockEau stock) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/StockEauAjout&ModifView.fxml"));
@@ -135,7 +162,9 @@ public class StockEauController {
             e.printStackTrace();
         }
     }
-
+    /**
+     * Supprime le stock d'eau sélectionné de la liste.
+     */
     @FXML
     private void supprimerStock() {
         StockEau selected = waterListView.getSelectionModel().getSelectedItem();
@@ -144,10 +173,18 @@ public class StockEauController {
         }
     }
 
+    /**
+     * Définit la liste observable des stocks d'eau à afficher.
+     * @param list La liste des stocks d'eau.
+     */
     public void setStockList(ObservableList<StockEau> list) {
         stockList.setAll(list);
     }
-
+    /**
+     * Change la vue affichée dans la fenêtre principale.
+     * @param stage La fenêtre principale.
+     * @param fxml  Le chemin du fichier FXML à charger.
+     */
     public static void changerVue(Stage stage, String fxml) {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxml));
@@ -159,6 +196,10 @@ public class StockEauController {
         }
     }
 
+    /**
+     * Gère le retour à la page d'accueil lors du clic sur le bouton correspondant.
+     * @param event L'événement de clic.
+     */
     @FXML
     private void onClickButtonMainPage(ActionEvent event) {
         // Obtenir le bouton qui a déclenché l'événement
