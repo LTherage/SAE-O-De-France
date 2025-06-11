@@ -5,7 +5,8 @@
 <?import javafx.geometry.Insets?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="fr.univartois.butinfo.sae.controller.CommandeController">
+            fx:controller="fr.univartois.butinfo.sae.controller.CommandeController"
+            stylesheets="@style.css">
 
     <center>
         <HBox spacing="20" >
