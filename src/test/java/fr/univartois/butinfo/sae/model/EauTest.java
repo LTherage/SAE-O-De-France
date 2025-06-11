@@ -44,4 +44,15 @@ public class EauTest {
 		eau.setPrix(1.5);
 		assertThat(eau.getPrix()).isEqualTo(1.5);
 	}
+
+	/**
+	 * Teste la méthode toString() de la classe Eau.
+	 */
+	@Test
+	@DisplayName("Test la méthode toString.")
+	public void testToString() {
+		Eau eau = new Eau("Evian", "Bouteille", 1.5);
+		String expected = "Eau{marque='Evian', categorie='Bouteille', prix=1.5}";
+		assertThat(eau.toString()).isEqualTo(expected);
+	}
 }
