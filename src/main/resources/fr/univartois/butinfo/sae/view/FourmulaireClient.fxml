@@ -36,6 +36,5 @@
     <HBox spacing="10" alignment="CENTER_RIGHT">
         <Button text="Valider" onAction="#valider"/>
         <Button text="Annuler" onAction="#annuler"/>
-        <Button text="Quitter l'application" onAction="#onClickButtonMainPage"/>
     </HBox>
 </VBox>

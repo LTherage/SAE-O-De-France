@@ -4,9 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95edc809-a003-4855-ab25-ec92c4b91e60" name="Changes" comment="Changement des List en ObservableList">
+    <list default="true" id="95edc809-a003-4855-ab25-ec92c4b91e60" name="Changes" comment="Ajouts de JavaDocs, et de displayName sur les tests">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/PMDPlugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Adresse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Adresse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Categorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Categorie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEntreprise.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEntreprise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientParticulier.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientParticulier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commande.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commande.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commune.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commune.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Eau.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Eau.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Entrepot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Entrepot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/LigneDeCommande.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/LigneDeCommande.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/MethodePaiement.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/MethodePaiement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Paiement.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Paiement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/PaiementSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/PaiementSimple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockGlobal.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockGlobal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeEtablissement.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeEtablissement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/HelloApplication.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/controller/FormulaireClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/controller/FormulaireClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Adresse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Adresse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Categorie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEntreprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEntreprise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.java" afterDir="false" />
@@ -14,6 +56,18 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commande.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commune.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Eau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Eau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Entrepot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Entrepot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/LigneDeCommande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/LigneDeCommande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/MethodePaiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/MethodePaiement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Paiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Paiement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/PaiementSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/PaiementSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/RemisesPossibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/RemisesPossibles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockEau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockEau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockGlobal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockGlobal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TraitementPaiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TraitementPaiement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeEtablissement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeEtablissement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +103,12 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="application" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SAE_dev2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -56,49 +116,52 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitLabMergeRequestFiltersHistory"><![CDATA[{
-  "history": [
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPENED",
-      "author": {
-        "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue",
-        "username": "hugo_richard",
-        "fullname": "Richard Hugo"
+      &quot;state&quot;: &quot;OPENED&quot;,
+      &quot;author&quot;: {
+        &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue&quot;,
+        &quot;username&quot;: &quot;hugo_richard&quot;,
+        &quot;fullname&quot;: &quot;Richard Hugo&quot;
       }
     },
     {
-      "state": "OPENED",
-      "author": {
-        "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue",
-        "username": "ugo_dassonville",
-        "fullname": "Dassonville Ugo"
+      &quot;state&quot;: &quot;OPENED&quot;,
+      &quot;author&quot;: {
+        &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue&quot;,
+        &quot;username&quot;: &quot;ugo_dassonville&quot;,
+        &quot;fullname&quot;: &quot;Dassonville Ugo&quot;
       }
-    },
-    {
-      "state": "OPENED",
-      "author": {
-        "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue",
-        "username": "ludovic_therage",
-        "fullname": "Therage Ludovic"
-      }
-    },
-    {
-      "state": "OPENED"
     }
   ],
-  "lastFilter": {
-    "state": "OPENED"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;author&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue&quot;,
+      &quot;username&quot;: &quot;ugo_dassonville&quot;,
+      &quot;fullname&quot;: &quot;Dassonville Ugo&quot;
+    }
   }
-}]]></component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "first": "https://gitlab.univ-artois.fr/matheo_popieul/sae-2.01",
-    "second": "c4e070d1-4a2d-4578-9170-9d840fc27cd5"
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.univ-artois.fr/matheo_popieul/sae-2.01&quot;,
+    &quot;second&quot;: &quot;c4e070d1-4a2d-4578-9170-9d840fc27cd5&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -107,31 +170,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build SAE_dev2.executor": "Run",
-    "Gradle.SAE_dev2 [run].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/azert/Documents/SAE_dev2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build SAE_dev2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SAE_dev2 [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.sae-2.01 [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.sae-2.01 [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.sae-2.01 [test].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ludovic/Documents/sae-2.01&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\azert\Documents\SAE_dev2\src\main\resources\fr\univartois\butinfo\sae\view" />
       <recent name="C:\Users\azert\Documents\SAE_dev2\src\main\java\fr\univartois\butinfo\ihm\model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.sae-2.01 [run]">
     <configuration name="SAE_dev2 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -154,19 +226,80 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="sae-2.01 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="sae-2.01 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="sae-2.01 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.sae-2.01 [run]" />
+        <item itemvalue="Gradle.sae-2.01 [build]" />
+        <item itemvalue="Gradle.sae-2.01 [test]" />
         <item itemvalue="Gradle.SAE_dev2 [run]" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -177,24 +310,81 @@
       <updated>1749624778226</updated>
       <workItem from="1749624780287" duration="1155000" />
       <workItem from="1749626062561" duration="308000" />
-      <workItem from="1749627541337" duration="1989000" />
+      <workItem from="1749627541337" duration="997000" />
     </task>
-    <task id="LOCAL-00001" summary="Changement des List en ObservableList">
+    <task id="LOCAL-00001" summary="Ajouts des dépendances">
       <option name="closed" value="true" />
-      <created>1749628701226</created>
+      <created>1749630725370</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1749628701226</updated>
+      <updated>1749630725370</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Vue de la commande et son controller">
+      <option name="closed" value="true" />
+      <created>1749637774589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749637774589</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Mettre le test {useJUnitPlatform()&#10;                } dans build.gradle">
+      <option name="closed" value="true" />
+      <created>1749638685913</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749638685913</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ajouts des display sur les tests">
+      <option name="closed" value="true" />
+      <created>1749640146467</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749640146467</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Suppression de System.out.err.println() pour le &quot;debugage&quot;">
+      <option name="closed" value="true" />
+      <created>1749640920527</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749640920527</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Nouveaux fichiers de test + erreurs à corriger (merci Ugo)">
+      <option name="closed" value="true" />
+      <created>1749642314242</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749642314242</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ajouts de JavaDocs, et de displayName sur les tests">
+      <option name="closed" value="true" />
+      <created>1749645575608</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749645575608</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changement des List en ObservableList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changement des List en ObservableList" />
+    <MESSAGE value="Ajouts des dépendances" />
+    <MESSAGE value="Vue de la commande et son controller" />
+    <MESSAGE value="Mettre le test {useJUnitPlatform()&#10;                } dans build.gradle" />
+    <MESSAGE value="Ajouts des display sur les tests" />
+    <MESSAGE value="Suppression de System.out.err.println() pour le &quot;debugage&quot;" />
+    <MESSAGE value="Nouveaux fichiers de test + erreurs à corriger (merci Ugo)" />
+    <MESSAGE value="Ajouts de JavaDocs, et de displayName sur les tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajouts de JavaDocs, et de displayName sur les tests" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SAE_dev2$sae_2_01__test_.ic" NAME="sae-2.01 [test] Coverage Results" MODIFIED="1749645702341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
