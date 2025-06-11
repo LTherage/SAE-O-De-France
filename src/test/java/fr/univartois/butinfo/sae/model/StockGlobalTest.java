@@ -1,5 +1,6 @@
 package fr.univartois.butinfo.sae.model;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StockGlobalTest {
 
 	@Test
+	@DisplayName( "Test l'ajout d'un stock.")
 	void add() {
 		StockGlobal stockGlobal = new StockGlobal();
 		Eau eau1 = new Eau("Evian", "Bouteille", 1.5);
@@ -19,6 +21,7 @@ class StockGlobalTest {
 	}
 
 	@Test
+	@DisplayName( "Test la suppression d'un stock.")
 	void sub() {
 		StockGlobal stockGlobal = new StockGlobal();
 		StockEau stock = new StockEau();
@@ -32,6 +35,7 @@ class StockGlobalTest {
 	}
 
 	@Test
+	@DisplayName("Test de quantité des stocks.")
 	void triQuantite() {
 		StockGlobal stockGlobal = new StockGlobal();
 		StockEau stock1 = new StockEau();

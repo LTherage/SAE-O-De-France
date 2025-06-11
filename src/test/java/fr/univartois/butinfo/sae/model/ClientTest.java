@@ -1,5 +1,6 @@
 package fr.univartois.butinfo.sae.model;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,8 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class ClientTest {
 
 	@Test
+	@DisplayName("test des points de fidélité des clients")
 	void ajoutPointsFidelite() {
-		System.err.println("PETIT BATARD");
+
 		ClientEntreprise clientEntreprise = new ClientEntreprise();
 		ClientEtablissementPublic clientEtablissementPublic = new ClientEtablissementPublic();
 		ClientParticulier clientParticulier = new ClientParticulier();

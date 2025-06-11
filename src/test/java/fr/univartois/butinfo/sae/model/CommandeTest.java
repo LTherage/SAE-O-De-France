@@ -1,5 +1,6 @@
 package fr.univartois.butinfo.sae.model;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,6 +9,7 @@ class CommandeTest {
 
 
 	@Test
+	@DisplayName("Test l'ajout de ligne de commande.")
 	void testAddLigneCommande() {
 		Eau eau = new Eau("Evian", "Bouteille", 1.5);
 		ClientParticulier client = new ClientParticulier();
@@ -17,6 +19,7 @@ class CommandeTest {
 	}
 
 	@Test
+	@DisplayName("Test la méthode Equals().")
 	void testEquals() {
 		Eau eau1 = new Eau("Evian", "Bouteille", 1.5);
 		Eau eau2 = new Eau("Evian", "Bouteille", 1.5);
@@ -30,6 +33,7 @@ class CommandeTest {
 	}
 
 	@Test
+	@DisplayName("Test la mise à jour de ligne de commande.")
 	void testUpdateLigneCommande(){
 		Eau eau = new Eau("Evian", "Bouteille", 1.5);
 		ClientParticulier client = new ClientParticulier();
@@ -40,6 +44,7 @@ class CommandeTest {
 	}
 
 	@Test
+	@DisplayName("Test le montant de la remise.")
 	void testMontantDeLaRemise() {
 		Eau eau = new Eau("Evian", "Bouteille", 1.5);
 
@@ -63,6 +68,7 @@ class CommandeTest {
 	}
 
 	@Test
+	@DisplayName( "Test le nombre de bouteilles gratuites.")
 	void testNombreBouteillesGratuites() {
 		Eau eau = new Eau("Evian", "Bouteille", 1.5);
 
@@ -82,6 +88,7 @@ class CommandeTest {
 		assertEquals(2, commandeEntreprise.nombreBouteillesGratuites());
 	}
 	@Test
+	@DisplayName("Test le montant total de la commande.")
 	void testMontant() {
 		Eau eau = new Eau("Evian", "Bouteille", 1.5);
 		ClientParticulier client = new ClientParticulier();
