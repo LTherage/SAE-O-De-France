@@ -12,7 +12,6 @@ class StockGlobalTest {
 	@DisplayName( "Test l'ajout d'un stock.")
 	void add() {
 		StockGlobal stockGlobal = new StockGlobal();
-		Eau eau1 = new Eau("Evian", "Bouteille", 1.5);
 		StockEau stock1 = new StockEau();
 
 		stockGlobal.add(stock1);
@@ -36,16 +35,25 @@ class StockGlobalTest {
 
 	@Test
 	@DisplayName("Test de quantité des stocks.")
-	void triQuantite() {
+	void testTriQuantite() {
 		StockGlobal stockGlobal = new StockGlobal();
 		StockEau stock1 = new StockEau();
 		StockEau stock2 = new StockEau();
+		StockEau stock3 = new StockEau();
+
+		stock1.setQuantite(30);
+		stock2.setQuantite(10);
+		stock3.setQuantite(20);
+
 		stockGlobal.add(stock1);
 		stockGlobal.add(stock2);
+		stockGlobal.add(stock3);
 
 		stockGlobal.triQuantite();
 
-		assertEquals(stock1, stockGlobal.getStocks()[0]);
-		assertEquals(stock2, stockGlobal.getStocks()[1]);
+		StockEau[] stocks = stockGlobal.getStocks();
+		assertEquals(10, stocks[0].getQuantite());
+		assertEquals(20, stocks[1].getQuantite());
+		assertEquals(30, stocks[2].getQuantite());
 	}
 }

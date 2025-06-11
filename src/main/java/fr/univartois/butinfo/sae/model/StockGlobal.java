@@ -35,7 +35,7 @@ public class StockGlobal {
     }
 
     public void triQuantite() {
-        Arrays.sort(stocks, StockEau.QuantityComparator);
+        Arrays.sort(stocks, 0, last, StockEau.QuantityComparator);
     }
 
     public int getLast() {
