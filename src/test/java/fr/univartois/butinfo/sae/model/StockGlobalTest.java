@@ -6,21 +6,29 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Classe de test pour {@link StockGlobal}.
+ */
 class StockGlobalTest {
 
+	/**
+	 * Teste l'ajout d'un stock d'eau dans le stock global.
+	 */
 	@Test
-	@DisplayName( "Test l'ajout d'un stock.")
+	@DisplayName("Test l'ajout d'un stock.")
 	void add() {
 		StockGlobal stockGlobal = new StockGlobal();
 		StockEau stock1 = new StockEau();
 
 		stockGlobal.add(stock1);
 		assertThat(stockGlobal.getStocks() != null);
-
 	}
 
+	/**
+	 * Teste la suppression (retrait de quantité) d'un stock d'eau.
+	 */
 	@Test
-	@DisplayName( "Test la suppression d'un stock.")
+	@DisplayName("Test la suppression d'un stock.")
 	void sub() {
 		StockGlobal stockGlobal = new StockGlobal();
 		StockEau stock = new StockEau();
@@ -30,9 +38,11 @@ class StockGlobalTest {
 		stockGlobal.sub(0, 5);
 
 		assertEquals(5, stock.getQuantite());
-
 	}
 
+	/**
+	 * Teste le tri des stocks d'eau selon la quantité.
+	 */
 	@Test
 	@DisplayName("Test de quantité des stocks.")
 	void testTriQuantite() {

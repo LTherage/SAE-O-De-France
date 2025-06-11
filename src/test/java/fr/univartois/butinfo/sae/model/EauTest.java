@@ -5,8 +5,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Classe de test pour {@link Eau}.
+ */
 public class EauTest {
 
+	/**
+	 * Teste que deux objets Eau différents ne sont pas égaux.
+	 */
 	@Test
 	@DisplayName("Test la méthode Equals.")
 	public void testEquals() {
@@ -15,6 +21,9 @@ public class EauTest {
 		assertThat(eau1).isNotEqualTo(eau2);
 	}
 
+	/**
+	 * Teste la comparaison des identifiants de deux bouteilles d'eau.
+	 */
 	@Test
 	@DisplayName("Compare les identifiants des bouteilles .")
 	public void compareId() {

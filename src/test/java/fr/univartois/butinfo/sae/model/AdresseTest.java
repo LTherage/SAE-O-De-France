@@ -1,11 +1,18 @@
 package fr.univartois.butinfo.sae.model;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Classe de test pour {@link Adresse}.
+ */
 public class AdresseTest {
 
+    /**
+     * Teste la création et l'accès aux champs de la classe Adresse.
+     */
     @Test
     @DisplayName("Test de la classe Adresse")
     public void testAdresse() {
@@ -13,10 +20,12 @@ public class AdresseTest {
         Adresse adresse = new Adresse(123, "75001", commune);
         assertEquals(123, adresse.getNumero());
         assertEquals("75001", adresse.getVoie());
-        assertEquals("Paris", adresse.getCommune().getNom());
-
+        assertEquals("Paris", adresse.getCommune());
     }
 
+    /**
+     * Teste l'égalité entre deux adresses ayant les mêmes valeurs.
+     */
     @Test
     @DisplayName("Test de l'égalité des adresses")
     public void testAdresseEquals() {
@@ -28,6 +37,9 @@ public class AdresseTest {
         assertEquals(adresse1, adresse2);
     }
 
+    /**
+     * Teste la méthode toString de la classe Adresse.
+     */
     @Test
     @DisplayName("Test de la méthode toString de l'adresse")
     public void testAdresseToString() {

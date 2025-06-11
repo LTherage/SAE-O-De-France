@@ -6,9 +6,14 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Classe de test pour {@link Commande}.
+ */
 class CommandeTest {
 
-
+	/**
+	 * Teste l'ajout d'une ligne de commande.
+	 */
 	@Test
 	@DisplayName("Test l'ajout de ligne de commande.")
 	void testAddLigneCommande() {
@@ -19,6 +24,9 @@ class CommandeTest {
 		assertEquals(1, commande.getLignesDeCommande().size());
 	}
 
+	/**
+	 * Teste la méthode equals() de la classe Commande.
+	 */
 	@Test
 	@DisplayName("Test la méthode Equals().")
 	void testEquals() {
@@ -33,6 +41,9 @@ class CommandeTest {
 		assertThat(commande1).isNotEqualTo(commande2);
 	}
 
+	/**
+	 * Teste la mise à jour d'une ligne de commande.
+	 */
 	@Test
 	@DisplayName("Test la mise à jour de ligne de commande.")
 	void testUpdateLigneCommande(){
@@ -44,6 +55,9 @@ class CommandeTest {
 		assertEquals(20, commande.getLignesDeCommande().getFirst().getQuantite());
 	}
 
+	/**
+	 * Teste le calcul du montant de la remise selon le type de client.
+	 */
 	@Test
 	@DisplayName("Test le montant de la remise.")
 	void testMontantDeLaRemise() {
@@ -68,6 +82,9 @@ class CommandeTest {
 		assertEquals(0.0, commandeEntreprise.montantDeLaRemise(), 0.01);
 	}
 
+	/**
+	 * Teste le calcul du nombre de bouteilles gratuites selon le type de client.
+	 */
 	@Test
 	@DisplayName( "Test le nombre de bouteilles gratuites.")
 	void testNombreBouteillesGratuites() {
@@ -88,6 +105,10 @@ class CommandeTest {
 		commandeEntreprise.addLigneCommande(eau, 250);
 		assertEquals(2, commandeEntreprise.nombreBouteillesGratuites());
 	}
+
+	/**
+	 * Teste le calcul du montant total de la commande.
+	 */
 	@Test
 	@DisplayName("Test le montant total de la commande.")
 	void testMontant() {

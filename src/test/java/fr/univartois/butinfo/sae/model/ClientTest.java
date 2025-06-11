@@ -5,8 +5,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Classe de test pour {@link Client} et ses sous-classes.
+ */
 class ClientTest {
 
+	/**
+	 * Vérifie l'ajout de points de fidélité pour chaque type de client.
+	 */
 	@Test
 	void ajoutPointsFidelite() {
 		ClientEntreprise clientEntreprise = new ClientEntreprise();
