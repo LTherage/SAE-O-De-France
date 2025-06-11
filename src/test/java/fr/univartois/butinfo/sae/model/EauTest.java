@@ -52,7 +52,7 @@ public class EauTest {
 	@DisplayName("Test la méthode toString.")
 	public void testToString() {
 		Eau eau = new Eau("Evian", "Bouteille", 1.5);
-		String expected = "Eau{marque='Evian', categorie='Bouteille', prix=1.5}";
+		String expected = "Eau{id=3, marque='Evian', categorie='Bouteille', prix=1.5}";
 		assertThat(eau.toString()).isEqualTo(expected);
 	}
 }
