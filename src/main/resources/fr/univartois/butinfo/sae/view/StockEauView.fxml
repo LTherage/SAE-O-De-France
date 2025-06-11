@@ -2,8 +2,8 @@
 
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-
 <?import javafx.geometry.Insets?>
+
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             xmlns="http://javafx.com/javafx"
             fx:controller="fr.univartois.butinfo.sae.controller.StockEauController">
@@ -14,7 +14,7 @@
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
             <Label text="Stocks disponibles"/>
-            <ListView fx:id="waterListView" minWidth="200"/>
+            <ListView fx:id="waterListView" minWidth="250"/>
             <HBox spacing="10">
                 <Button text="Ajouter" onAction="#ajouterStock"/>
                 <Button text="Modifier" onAction="#modifierStock"/>
@@ -24,14 +24,16 @@
     </left>
 
     <center>
-        <VBox spacing="10">
+        <VBox spacing="8">
             <padding>
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
-            <Label text="Détails du stock sélectionné"/>
-            <Label fx:id="categorieLabel"/>
-            <Label fx:id="entrepotLabel"/>
-            <Label fx:id="quantiteLabel"/>
+            <Label text="Détails du stock sélectionné" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+            <Label fx:id="categorieLabel" text="Catégorie : "/>
+            <Label fx:id="entrepotLabel" text="Entrepôt : "/>
+            <Label fx:id="adresseLabel" text="Adresse : "/>
+            <Label fx:id="communeLabel" text="Commune : "/>
+            <Label fx:id="quantiteLabel" text="Quantité : "/>
         </VBox>
     </center>
 </BorderPane>

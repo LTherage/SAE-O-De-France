@@ -6,17 +6,13 @@ import java.util.Objects;
 public class StockEau {
     private Categorie categorie;
     private Entrepot entrepot;
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        StockEau stockEau = (StockEau) o;
-        return quantite == stockEau.quantite && categorie == stockEau.categorie && Objects.equals(entrepot, stockEau.entrepot);
-    }
     /**
      * Le nombre de caisses de bouteilles.
      */
     private int quantite;
+
+    public StockEau() {
+    }
 
     public Categorie getCategorie() {
         return categorie;
@@ -34,6 +30,16 @@ public class StockEau {
         this.quantite += quantite;
     }
 
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
+    public void setEntrepot(Entrepot entrepot) {
+        this.entrepot = entrepot;
+    }
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
+    }
+
 
     public static Comparator<StockEau> QuantityComparator = new Comparator<StockEau>() {
         @Override
@@ -43,15 +49,18 @@ public class StockEau {
     };
 
     @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        StockEau stockEau = (StockEau) o;
+        return quantite == stockEau.quantite && categorie == stockEau.categorie && Objects.equals(entrepot, stockEau.entrepot);
+    }
+
+    @Override
     public String toString() {
         return "StockEau{" +
                 "categorie=" + categorie +
                 ", entrepot=" + entrepot +
                 ", quantite=" + quantite +
                 '}';
-    }
-
-    public void setQuantite(int i) {
-        quantite= i;
     }
 }
