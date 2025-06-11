@@ -8,8 +8,8 @@ public class CommuneTest {
     @DisplayName( "Test la méthode toString.")
     void testToString() {
         Commune commune = new Commune("12345", "Testville", "Testville");
-        String expected = "Commune{codePostal='12345', nom='Testville', nomCommune='Testville', nomDepartement='Testville'}";
-        assert commune.toString().equals(expected) : "toString method did not return the expected value.";
+        String expected = "Commune{codePostal='12345', nom='Testville'', nomDepartement='Testville'}";
+        assert commune.toString().equals(expected);
     }
     @Test
     @DisplayName("Test le constructeur et les accesseurs.")

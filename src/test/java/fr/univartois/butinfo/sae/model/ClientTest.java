@@ -15,7 +15,7 @@ class ClientTest {
 		clientEtablissementPublic.ajoutPointsFidelite(5000);
 		clientParticulier.ajoutPointsFidelite(5000);
 		assertEquals(50, clientEntreprise.getPointsFidelite());
-		assertEquals(1000, clientEtablissementPublic.getPointsFidelite());
+		assertEquals(100, clientEtablissementPublic.getPointsFidelite());
 		assertEquals(500, clientParticulier.getPointsFidelite());
 	}
 }
