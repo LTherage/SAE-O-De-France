@@ -1,24 +1,34 @@
 package fr.univartois.butinfo.sae.model;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Classe de test pour {@link StockGlobal}.
+ */
 class StockGlobalTest {
 
+	/**
+	 * Teste l'ajout d'un stock d'eau dans le stock global.
+	 */
 	@Test
+	@DisplayName("Test l'ajout d'un stock.")
 	void add() {
 		StockGlobal stockGlobal = new StockGlobal();
-		Eau eau1 = new Eau("Evian", "Bouteille", 1.5);
 		StockEau stock1 = new StockEau();
 
 		stockGlobal.add(stock1);
 		assertThat(stockGlobal.getStocks() != null);
-
 	}
 
+	/**
+	 * Teste la suppression (retrait de quantité) d'un stock d'eau.
+	 */
 	@Test
+	@DisplayName("Test la suppression d'un stock.")
 	void sub() {
 		StockGlobal stockGlobal = new StockGlobal();
 		StockEau stock = new StockEau();
@@ -28,20 +38,32 @@ class StockGlobalTest {
 		stockGlobal.sub(0, 5);
 
 		assertEquals(5, stock.getQuantite());
-
 	}
 
+	/**
+	 * Teste le tri des stocks d'eau selon la quantité.
+	 */
 	@Test
-	void triQuantite() {
+	@DisplayName("Test de quantité des stocks.")
+	void testTriQuantite() {
 		StockGlobal stockGlobal = new StockGlobal();
 		StockEau stock1 = new StockEau();
 		StockEau stock2 = new StockEau();
+		StockEau stock3 = new StockEau();
+
+		stock1.setQuantite(30);
+		stock2.setQuantite(10);
+		stock3.setQuantite(20);
+
 		stockGlobal.add(stock1);
 		stockGlobal.add(stock2);
+		stockGlobal.add(stock3);
 
 		stockGlobal.triQuantite();
 
-		assertEquals(stock1, stockGlobal.getStocks()[0]);
-		assertEquals(stock2, stockGlobal.getStocks()[1]);
+		StockEau[] stocks = stockGlobal.getStocks();
+		assertEquals(10, stocks[0].getQuantite());
+		assertEquals(20, stocks[1].getQuantite());
+		assertEquals(30, stocks[2].getQuantite());
 	}
 }

@@ -48,4 +48,8 @@ public class Entrepot {
                 ", adresse=" + adresse +
                 '}';
     }
+
+	public boolean compareId(Entrepot entrepot2) {
+        return code==entrepot2.code;
+	}
 }
