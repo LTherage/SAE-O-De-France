@@ -1,5 +1,9 @@
 package fr.univartois.butinfo.sae.model;
 
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.SortedList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,13 +11,13 @@ public class Commande implements RemisesPossibles {
     private final int id;
 
     private static int nextId = 0;
-    private final List<LigneDeCommande> lignesDeCommande;
+    private final ObservableList<LigneDeCommande> lignesDeCommande;
     private final Client client;
 
     public Commande(Client client) {
         this.id = nextId++;
         this.client = client;
-        lignesDeCommande = new ArrayList<>();
+        lignesDeCommande = new SimpleListProperty<>();
     }
 
     @Override
@@ -64,5 +68,9 @@ public class Commande implements RemisesPossibles {
 
     public int getId() {
         return id;
+    }
+
+    public ObservableList<LigneDeCommande> getLignesDeCommande() {
+        return lignesDeCommande;
     }
 }
