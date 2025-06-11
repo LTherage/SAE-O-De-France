@@ -150,23 +150,5 @@ public class FormulaireClientController {
 		champTelephone.getScene().getWindow().hide();
 	}
 
-	public static void changerVue(Stage stage, String fxml) {
-		try {
-			FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxml));
-			Parent root = loader.load();
-			stage.setScene(new Scene(root, 900, 540));
-		} catch (IOException e) {
-			System.err.println("Erreur lors du chargement de " + fxml);
-			e.printStackTrace();
-		}
-	}
 
-	@FXML
-	private void onClickButtonMainPage(ActionEvent event) {
-		// Obtenir le bouton qui a déclenché l'événement
-		Button button = (Button) event.getSource();
-		// Obtenir la scène à partir du bouton
-		Stage stage = (Stage) button.getScene().getWindow();
-		changerVue(stage, "view/Accueil-view.fxml");
-	}
 }
