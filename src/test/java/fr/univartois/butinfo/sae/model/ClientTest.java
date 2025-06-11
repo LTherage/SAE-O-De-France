@@ -8,7 +8,6 @@ class ClientTest {
 
 	@Test
 	void ajoutPointsFidelite() {
-		System.err.println("PETIT BATARD");
 		ClientEntreprise clientEntreprise = new ClientEntreprise();
 		ClientEtablissementPublic clientEtablissementPublic = new ClientEtablissementPublic();
 		ClientParticulier clientParticulier = new ClientParticulier();
