@@ -22,6 +22,15 @@ public class ClientEntreprise extends Client{
         return typeClient.toString();
     }
 
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom){
+        this.prenom=prenom;
+    }
+
     @Override
     public String toString() {
         return "ClientEntreprise{" +
@@ -41,5 +50,13 @@ public class ClientEntreprise extends Client{
         if (!super.equals(o)) return false;
         ClientEntreprise that = (ClientEntreprise) o;
         return Objects.equals(nom, that.nom) && Objects.equals(prenom, that.prenom) && typeClient == that.typeClient;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
     }
 }

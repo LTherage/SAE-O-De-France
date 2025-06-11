@@ -34,11 +34,27 @@ public class ClientEtablissementPublic extends Client {
                 '}';
     }
 
+    public void setNom(String nom){
+        this.nom=nom;
+    }
+
+    public void setType(TypeEtablissement type){
+        this.type=type;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         ClientEtablissementPublic that = (ClientEtablissementPublic) o;
         return Objects.equals(nom, that.nom) && type == that.type && typeClient == that.typeClient;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public Object getType() {
+        return type;
     }
 }
