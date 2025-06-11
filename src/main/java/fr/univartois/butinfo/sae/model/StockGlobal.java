@@ -38,4 +38,11 @@ public class StockGlobal {
         Arrays.sort(stocks, StockEau.QuantityComparator);
     }
 
+    public int getLast() {
+        return last;
+    }
+
+    public StockEau[] getStocks() {
+        return stocks;
+    }
 }

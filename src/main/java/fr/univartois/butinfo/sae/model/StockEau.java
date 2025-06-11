@@ -50,4 +50,8 @@ public class StockEau {
                 ", quantite=" + quantite +
                 '}';
     }
+
+    public void setQuantite(int i) {
+        quantite= i;
+    }
 }

@@ -17,6 +17,10 @@ public class Eau {
         return id == eau.id && Double.compare(prix, eau.prix) == 0 && Objects.equals(marque, eau.marque) && Objects.equals(categorie, eau.categorie);
     }
 
+    public boolean compareId(Eau eau) {
+        return this.id != eau.id;
+    }
+
     public Eau(String marque, String categorie, double prix) {
         this.id = nextId++;
         this.marque = marque;
