@@ -28,6 +28,12 @@ public class StockEauAjoutModifController {
         categorieComboBox.setItems(FXCollections.observableArrayList(Categorie.values()));
     }
 
+    @FXML
+    private void onAnnuler() {
+        Stage stage = (Stage) categorieComboBox.getScene().getWindow();
+        stage.close();
+    }
+
     public void setStock(StockEau stock) {
         this.stock = stock;
 

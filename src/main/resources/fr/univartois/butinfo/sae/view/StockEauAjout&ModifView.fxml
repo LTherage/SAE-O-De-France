@@ -46,6 +46,9 @@
 
     <Label fx:id="errorLabel" textFill="red" wrapText="true" GridPane.rowIndex="9" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
 
-    <!-- Bouton de validation -->
-    <Button text="Valider" onAction="#onValider" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+    <!-- Boutons Valider / Annuler -->
+    <HBox spacing="10" GridPane.rowIndex="10" GridPane.columnIndex="1">
+        <Button text="Valider" onAction="#onValider"/>
+        <Button text="Annuler" onAction="#onAnnuler"/>
+    </HBox>
 </GridPane>
