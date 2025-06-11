@@ -8,10 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -60,6 +57,9 @@ public class FormulaireClientController {
 	private TextField champDepartement;
 	/** Client à modifier (null si création). */
 	private Client clientAModifier;
+
+	@FXML
+	private Label errorLabel;
 
 	/**
 	 * Initialise le contrôleur après le chargement du FXML.
@@ -111,35 +111,84 @@ public class FormulaireClientController {
 	 */
 	@FXML
 	public void valider() {
+		errorLabel.setText(""); // Réinitialise le message d'erreur
+
 		TypeClient type = choiceTypeClient.getValue();
 		if (type == null) {
+			errorLabel.setText("Veuillez sélectionner un type de client.");
 			return;
 		}
 
 		String tel = champTelephone.getText();
+		if (tel == null || tel.isBlank()) {
+			errorLabel.setText("Le téléphone est obligatoire.");
+			return;
+		}
+
 		String mail = champEmail.getText();
+		if (mail == null || mail.isBlank()) {
+			errorLabel.setText("L'email est obligatoire.");
+			return;
+		}
 
 		String adresseStr = champAdresse.getText();
-		int numero = 0;
-		String voie = "";
-		if (adresseStr != null && adresseStr.contains(" ")) {
+		if (adresseStr == null || !adresseStr.contains(" ")) {
+			errorLabel.setText("L'adresse doit contenir un numéro suivi d'une voie.");
+			return;
+		}
+
+		int numero;
+		String voie;
+		try {
 			String[] parts = adresseStr.split(" ", 2);
-			try {
-				numero = Integer.parseInt(parts[0]);
-				voie = parts[1];
-			} catch (NumberFormatException ignore) {
-				// Peut-être afficher une erreur ou loguer ici
+			numero = Integer.parseInt(parts[0]);
+			if (numero <= 0) {
+				errorLabel.setText("Le numéro d'adresse doit être un entier positif.");
+				return;
 			}
+			voie = parts[1];
+			if (voie.isBlank()) {
+				errorLabel.setText("La voie d'adresse ne peut pas être vide.");
+				return;
+			}
+		} catch (NumberFormatException e) {
+			errorLabel.setText("Le numéro d'adresse doit être un nombre valide.");
+			return;
 		}
 
 		String nomCommune = champNomCommune.getText();
 		String codePostal = champCodePostal.getText();
 		String departement = champDepartement.getText();
+		if (nomCommune == null || nomCommune.isBlank() ||
+				codePostal == null || codePostal.isBlank() ||
+				departement == null || departement.isBlank()) {
+			errorLabel.setText("Les informations de la commune sont obligatoires.");
+			return;
+		}
+
+		// Validation selon le type client
+		switch (type) {
+			case PARTICULIER, ENTREPRISE -> {
+				if (champNom.getText() == null || champNom.getText().isBlank() ||
+						champPrenom.getText() == null || champPrenom.getText().isBlank()) {
+					errorLabel.setText("Le nom et prénom sont obligatoires.");
+					return;
+				}
+			}
+			case ETABLISSEMENT_PUBLIC -> {
+				if (champNomEtablissement.getText() == null || champNomEtablissement.getText().isBlank() ||
+						choiceTypeEtablissement.getValue() == null) {
+					errorLabel.setText("Le nom et le type de l'établissement public sont obligatoires.");
+					return;
+				}
+			}
+		}
 
 		Commune commune = new Commune(nomCommune, codePostal, departement);
 		Adresse adresse = new Adresse(numero, voie, commune);
 
 		if (clientAModifier != null) {
+			// Modification client existant
 			clientAModifier.setTelephone(tel);
 			clientAModifier.setEmail(mail);
 			clientAModifier.setAdresse(adresse);
@@ -165,7 +214,7 @@ public class FormulaireClientController {
 				}
 			}
 		} else {
-			// Mode création : on crée un nouveau client
+			// Création d'un nouveau client
 			Client nouveauClient = null;
 
 			switch (type) {
@@ -200,8 +249,10 @@ public class FormulaireClientController {
 		}
 
 		if (listView != null) listView.refresh();
+		// Ferme la fenêtre
 		champTelephone.getScene().getWindow().hide();
 	}
+
 
 	/**
 	 * Pré-remplit le formulaire avec les informations du client à modifier.

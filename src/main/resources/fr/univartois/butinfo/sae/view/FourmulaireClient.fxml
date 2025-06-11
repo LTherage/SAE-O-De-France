@@ -34,6 +34,8 @@
     <TextField fx:id="champTelephone" promptText="Téléphone"/>
     <TextField fx:id="champEmail" promptText="Email"/>
 
+    <Label fx:id="errorLabel" textFill="red" minWidth="500"/>
+
     <HBox spacing="10" alignment="CENTER_RIGHT">
         <Button text="Valider" onAction="#valider"/>
         <Button text="Annuler" onAction="#annuler"/>
