@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="fr.univartois.butinfo.sae.controller.StockEauController">
+
+    <left>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Stocks disponibles"/>
+            <ListView fx:id="waterListView" minWidth="200"/>
+            <HBox spacing="10">
+                <Button text="Ajouter" onAction="#ajouterStock"/>
+                <Button text="Modifier" onAction="#modifierStock"/>
+                <Button text="Supprimer" onAction="#supprimerStock"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Détails du stock sélectionné"/>
+            <Label fx:id="categorieLabel"/>
+            <Label fx:id="entrepotLabel"/>
+            <Label fx:id="quantiteLabel"/>
+        </VBox>
+    </center>
+</BorderPane>
