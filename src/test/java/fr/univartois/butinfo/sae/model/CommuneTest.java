@@ -8,7 +8,7 @@ public class CommuneTest {
     @DisplayName( "Test la méthode toString.")
     void testToString() {
         Commune commune = new Commune("12345", "Testville", "Testville");
-        String expected = "Commune{codePostal='12345', nom='Testville'', nomDepartement='Testville'}";
+        String expected = "Commune{code='12345', nom='Testville', departement='Testville'}";
         assert commune.toString().equals(expected);
     }
     @Test

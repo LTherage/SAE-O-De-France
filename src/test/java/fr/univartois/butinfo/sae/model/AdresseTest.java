@@ -13,7 +13,7 @@ public class AdresseTest {
         Adresse adresse = new Adresse(123, "75001", commune);
         assertEquals(123, adresse.getNumero());
         assertEquals("75001", adresse.getVoie());
-        assertEquals("Paris", adresse.getCommune());
+        assertEquals("Paris", adresse.getCommune().getNom());
 
     }
 
