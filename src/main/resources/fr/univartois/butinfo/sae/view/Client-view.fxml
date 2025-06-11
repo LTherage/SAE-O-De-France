@@ -22,6 +22,7 @@
             <padding>
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
+            <Button text="Revenir à l'accueil de l'application" onAction="#onClickButtonMainPage"/>
             <Button text="Ajouter" onAction="#ajouterClient" />
             <Button text="Modifier" onAction="#modifierClient" />
             <Button text="Supprimer" onAction="#supprimerClient" />
