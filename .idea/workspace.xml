@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95edc809-a003-4855-ab25-ec92c4b91e60" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+    <list default="true" id="95edc809-a003-4855-ab25-ec92c4b91e60" name="Changes" comment="Changement des List en ObservableList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Adresse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Adresse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEntreprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEntreprise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientParticulier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientParticulier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commune.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Eau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Eau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,15 +76,21 @@
         "username": "ugo_dassonville",
         "fullname": "Dassonville Ugo"
       }
+    },
+    {
+      "state": "OPENED",
+      "author": {
+        "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue",
+        "username": "ludovic_therage",
+        "fullname": "Therage Ludovic"
+      }
+    },
+    {
+      "state": "OPENED"
     }
   ],
   "lastFilter": {
-    "state": "OPENED",
-    "author": {
-      "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAuthorFilterValue",
-      "username": "ugo_dassonville",
-      "fullname": "Dassonville Ugo"
-    }
+    "state": "OPENED"
   }
 }]]></component>
   <component name="GitLabMergeRequestsSettings"><![CDATA[{
@@ -173,11 +177,24 @@
       <updated>1749624778226</updated>
       <workItem from="1749624780287" duration="1155000" />
       <workItem from="1749626062561" duration="308000" />
-      <workItem from="1749627541337" duration="997000" />
+      <workItem from="1749627541337" duration="1989000" />
     </task>
+    <task id="LOCAL-00001" summary="Changement des List en ObservableList">
+      <option name="closed" value="true" />
+      <created>1749628701226</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749628701226</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changement des List en ObservableList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changement des List en ObservableList" />
   </component>
 </project>

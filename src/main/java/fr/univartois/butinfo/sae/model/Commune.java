@@ -7,6 +7,15 @@ public class Commune {
     private String nom;
     private String departement;
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Commune commune = (Commune) o;
+        return Objects.equals(code, commune.code) && Objects.equals(nom, commune.nom) && Objects.equals(departement, commune.departement);
+    }
+
+
+
     public Commune(String code, String nom, String departement) {
         this.code = code;
         this.nom = nom;
@@ -35,18 +44,6 @@ public class Commune {
 
     public void setDepartement(String departement) {
         this.departement = departement;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Commune commune)) return false;
-        return Objects.equals(getCode(), commune.getCode()) && Objects.equals(getNom(), commune.getNom()) && Objects.equals(getDepartement(), commune.getDepartement());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getCode(), getNom(), getDepartement());
     }
 
     @Override

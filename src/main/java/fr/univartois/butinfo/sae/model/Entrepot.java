@@ -7,6 +7,13 @@ public class Entrepot {
     private String nom;
     private Adresse adresse;
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Entrepot entrepot = (Entrepot) o;
+        return code == entrepot.code && Objects.equals(nom, entrepot.nom) && Objects.equals(adresse, entrepot.adresse);
+    }
+
     public Entrepot(int code, String nom, Adresse adresse) {
         this.code = code;
         this.nom = nom;
@@ -31,18 +38,6 @@ public class Entrepot {
 
     public void setAdresse(Adresse adresse) {
         this.adresse = adresse;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Entrepot entrepot)) return false;
-        return getCode() == entrepot.getCode();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getCode());
     }
 
     @Override

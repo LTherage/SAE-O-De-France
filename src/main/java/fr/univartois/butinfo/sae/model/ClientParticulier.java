@@ -1,5 +1,7 @@
 package fr.univartois.butinfo.sae.model;
 
+import java.util.Objects;
+
 import static fr.univartois.butinfo.sae.model.TypeClient.PARTICULIER;
 
 public class ClientParticulier extends Client {
@@ -47,5 +49,13 @@ public class ClientParticulier extends Client {
                 ", email='" + email + '\'' +
                 ", pointsFidelite=" + pointsFidelite +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        ClientParticulier that = (ClientParticulier) o;
+        return Objects.equals(nom, that.nom) && Objects.equals(prenom, that.prenom) && typeClient == that.typeClient;
     }
 }

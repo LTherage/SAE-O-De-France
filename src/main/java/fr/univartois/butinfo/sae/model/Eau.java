@@ -10,6 +10,13 @@ public class Eau {
 
     private static int nextId = 0;
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Eau eau = (Eau) o;
+        return id == eau.id && Double.compare(prix, eau.prix) == 0 && Objects.equals(marque, eau.marque) && Objects.equals(categorie, eau.categorie);
+    }
+
     public Eau(String marque, String categorie, double prix) {
         this.id = nextId++;
         this.marque = marque;
@@ -39,18 +46,6 @@ public class Eau {
 
     public void setPrix(double prix) {
         this.prix = prix;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Eau eau)) return false;
-        return id == eau.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 
     @Override
