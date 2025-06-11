@@ -3,13 +3,8 @@ package fr.univartois.butinfo.sae.controller;
 import fr.univartois.butinfo.sae.model.*;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class StockEauAjoutModifController {
 
@@ -23,6 +18,8 @@ public class StockEauAjoutModifController {
     @FXML private TextField nomEntrepotField;
     @FXML private TextField numeroAdresseField;
     @FXML private TextField voieAdresseField;
+
+    @FXML private Label errorLabel;
 
     private StockEau stock;
 
@@ -61,32 +58,83 @@ public class StockEauAjoutModifController {
 
     @FXML
     private void onValider() {
+        errorLabel.setText("");
+
         if (stock == null) return;
 
         try {
-            stock.setCategorie(categorieComboBox.getValue());
-            stock.setQuantite(Integer.parseInt(quantiteTextField.getText()));
+            if (categorieComboBox.getValue() == null) {
+                errorLabel.setText("Veuillez sélectionner une catégorie.");
+                return;
+            }
 
-            int code = Integer.parseInt("0" + codeEntrepotField.getText());
-            String nom = nomEntrepotField.getText();
-            int numero = Integer.parseInt("0" + numeroAdresseField.getText());
-            String voie = voieAdresseField.getText();
+            int quantite;
+            try {
+                quantite = Integer.parseInt(quantiteTextField.getText());
+                if (quantite < 0) {
+                    errorLabel.setText("La quantité doit être positive.");
+                    return;
+                }
+            } catch (NumberFormatException e) {
+                errorLabel.setText("La quantité doit être un nombre entier.");
+                return;
+            }
+
+            int codeEntrepot;
+            try {
+                codeEntrepot = Integer.parseInt(codeEntrepotField.getText());
+                if (codeEntrepot < 0) {
+                    errorLabel.setText("Le code de l'entrepôt doit être un nombre positif.");
+                    return;
+                }
+            } catch (NumberFormatException e) {
+                errorLabel.setText("Le code de l'entrepôt doit être un nombre entier.");
+                return;
+            }
+
+            int numeroAdresse;
+            try {
+                numeroAdresse = Integer.parseInt(numeroAdresseField.getText());
+                if (numeroAdresse < 0) {
+                    errorLabel.setText("Le numéro d'adresse doit être positif.");
+                    return;
+                }
+            } catch (NumberFormatException e) {
+                errorLabel.setText("Le numéro d'adresse doit être un nombre entier.");
+                return;
+            }
+
+            // Champs texte obligatoires
+            if (nomEntrepotField.getText().isBlank()) {
+                errorLabel.setText("Le nom de l'entrepôt est obligatoire.");
+                return;
+            }
+
+            if (voieAdresseField.getText().isBlank()) {
+                errorLabel.setText("La voie d'adresse est obligatoire.");
+                return;
+            }
+
+            if (communeCodeField.getText().isBlank() || communeNomField.getText().isBlank() || communeDepartementField.getText().isBlank()) {
+                errorLabel.setText("Tous les champs de la commune sont obligatoires.");
+                return;
+            }
+
+            stock.setCategorie(categorieComboBox.getValue());
+            stock.setQuantite(quantite);
 
             Commune commune = new Commune(communeCodeField.getText(), communeNomField.getText(), communeDepartementField.getText());
-            Adresse adresse = new Adresse(numero, voie, commune);
-            Entrepot entrepot = new Entrepot(code, nom, adresse);
+            Adresse adresse = new Adresse(numeroAdresse, voieAdresseField.getText(), commune);
+            Entrepot entrepot = new Entrepot(codeEntrepot, nomEntrepotField.getText(), adresse);
             stock.setEntrepot(entrepot);
 
-            System.out.println("Stock validé : " + stock);
+            // Fermer la fenêtre modale
+            Stage stage = (Stage) categorieComboBox.getScene().getWindow();
+            stage.close();
 
         } catch (Exception e) {
-            System.out.println("Erreur de saisie : " + e.getMessage());
-            return; // on ne ferme pas la fenêtre si erreur
+            errorLabel.setText("Erreur inattendue : " + e.getMessage());
         }
-
-        // Fermer la fenêtre modale
-        Stage stage = (Stage) categorieComboBox.getScene().getWindow();
-        stage.close();
     }
 
 }
