@@ -1,6 +1,11 @@
 package fr.univartois.butinfo.sae.controller;
 
 import fr.univartois.butinfo.sae.HelloApplication;
+import fr.univartois.butinfo.sae.model.Client;
+import fr.univartois.butinfo.sae.model.Commande;
+import fr.univartois.butinfo.sae.model.StockEau;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +27,10 @@ public class AccueilController {
      */
     @FXML
     private Button connexion;
+    public static final ObservableList<Commande> commandesAll = FXCollections.observableArrayList();
+    public static final ObservableList<Client> clientsAll = FXCollections.observableArrayList();
+    public static final ObservableList<StockEau> stocksAll = FXCollections.observableArrayList();
+
 
     /**
      * Change la vue affichée dans la fenêtre principale.

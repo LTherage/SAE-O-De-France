@@ -15,59 +15,47 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
 /**
  * Contrôleur JavaFX pour le formulaire d'ajout ou de modification d'un client.
  * Permet de saisir ou modifier les informations d'un client (particulier, entreprise ou établissement public).
  */
 public class FormulaireClientController {
 	/** Liste observable des clients à mettre à jour après ajout ou modification. */
-
 	private ObservableList<Client> clients;
 	/** ListView associée à la liste des clients (pour rafraîchir l'affichage). */
-
 	private ListView<Client> listView;
 	/** Choix du type de client (particulier, entreprise, établissement public). */
-
 	@FXML
 	private ChoiceBox<TypeClient> choiceTypeClient;
 	/** Champ de saisie du téléphone. */
-
 	@FXML
 	private TextField champTelephone;
 	/** Champ de saisie de l'email. */
-
 	@FXML
 	private TextField champEmail;
 	/** Champ de saisie du nom (particulier ou entreprise). */
-
 	@FXML
 	private TextField champNom;
 	/** Champ de saisie du prénom (particulier ou entreprise). */
-
 	@FXML
 	private TextField champPrenom;
 	/** Champ de saisie du nom de l'établissement (établissement public). */
-
 	@FXML
 	private TextField champNomEtablissement;
 	/** Choix du type d'établissement (établissement public). */
-
 	@FXML
 	private ChoiceBox<TypeEtablissement> choiceTypeEtablissement;
 	/** Champ de saisie de l'adresse (numéro et voie). */
-
 	@FXML
 	private TextField champAdresse;
 	/** Champ de saisie du nom de la commune. */
-
 	@FXML
 	private TextField champNomCommune;
 	/** Champ de saisie du code postal. */
-
 	@FXML
 	private TextField champCodePostal;
 	/** Champ de saisie du département. */
-
 	@FXML
 	private TextField champDepartement;
 	/** Client à modifier (null si création). */
@@ -83,14 +71,22 @@ public class FormulaireClientController {
 		choiceTypeEtablissement.getItems().addAll(TypeEtablissement.values());
 
 		choiceTypeClient.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
-			boolean showNomPrenom = (newVal == TypeClient.PARTICULIER || newVal == TypeClient.ENTREPRISE);
-			champNom.setVisible(showNomPrenom);
-			champPrenom.setVisible(showNomPrenom);
-
-			boolean showEtabFields = (newVal == TypeClient.ETABLISSEMENT_PUBLIC);
-			champNomEtablissement.setVisible(showEtabFields);
-			choiceTypeEtablissement.setVisible(showEtabFields);
+			updateVisibility(newVal);
 		});
+	}
+
+	/**
+	 * Met à jour la visibilité des champs selon le type de client sélectionné.
+	 * @param type Type de client sélectionné.
+	 */
+	private void updateVisibility(TypeClient type) {
+		boolean showNomPrenom = (type == TypeClient.PARTICULIER || type == TypeClient.ENTREPRISE);
+		champNom.setVisible(showNomPrenom);
+		champPrenom.setVisible(showNomPrenom);
+
+		boolean showEtabFields = (type == TypeClient.ETABLISSEMENT_PUBLIC);
+		champNomEtablissement.setVisible(showEtabFields);
+		choiceTypeEtablissement.setVisible(showEtabFields);
 	}
 
 	/**
@@ -132,7 +128,7 @@ public class FormulaireClientController {
 				numero = Integer.parseInt(parts[0]);
 				voie = parts[1];
 			} catch (NumberFormatException ignore) {
-
+				// Peut-être afficher une erreur ou loguer ici
 			}
 		}
 
@@ -228,8 +224,10 @@ public class FormulaireClientController {
 			choiceTypeClient.setValue(TypeClient.ETABLISSEMENT_PUBLIC);
 			champNomEtablissement.setText(((ClientEtablissementPublic) client).getNom());
 			choiceTypeEtablissement.setValue((TypeEtablissement) ((ClientEtablissementPublic) client).getType());
-
 		}
+
+		// Mise à jour visibilité selon le type sélectionné
+		updateVisibility(choiceTypeClient.getValue());
 
 		champTelephone.setText(client.getTelephone());
 		champEmail.setText(client.getEmail());
@@ -270,13 +268,9 @@ public class FormulaireClientController {
 	 */
 	@FXML
 	private void onClickButtonMainPage(ActionEvent event) {
-		// Obtenir le bouton qui a déclenché l'événement
 		Button button = (Button) event.getSource();
-		// Obtenir la scène à partir du bouton
 		Stage stage = (Stage) button.getScene().getWindow();
 		changerVue(stage, "view/Accueil-view.fxml");
 	}
-
-
 
 }

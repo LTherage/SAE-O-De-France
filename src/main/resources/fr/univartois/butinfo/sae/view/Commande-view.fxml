@@ -8,7 +8,7 @@
             fx:controller="fr.univartois.butinfo.sae.controller.CommandeController">
 
     <center>
-        <HBox spacing="20" >
+        <HBox spacing="20">
             <ListView fx:id="listeCommandes" />
             <VBox spacing="10" alignment="TOP_LEFT">
                 <Label text="Nom de la personne :" />

@@ -2,7 +2,6 @@ package fr.univartois.butinfo.sae.controller;
 
 import fr.univartois.butinfo.sae.HelloApplication;
 import fr.univartois.butinfo.sae.model.*;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,27 +16,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * Contrôleur JavaFX pour la gestion des clients.
- * Permet d'afficher, ajouter, modifier, supprimer des clients et de consulter leurs détails.
- */
 public class ClientController {
 
-    /** ListView affichant la liste des clients. */
     @FXML
     private ListView<Client> listeClients;
-    /** Label affichant les informations détaillées du client sélectionné. */
-
     @FXML
     private Label labelInfo;
-    /** Liste observable contenant les clients. */
 
-    private final ObservableList<Client> clients = FXCollections.observableArrayList();
+    // Utilisation de la liste statique partagée depuis AccueilController
+    private final ObservableList<Client> clients = AccueilController.clientsAll;
 
-    /**
-     * Initialise le contrôleur après le chargement du FXML.
-     * Configure la ListView et l'affichage des détails.
-     */
     @FXML
     public void initialize() {
         listeClients.setItems(clients);
@@ -123,9 +111,6 @@ public class ClientController {
         });
     }
 
-    /**
-     * Ouvre la fenêtre d'ajout d'un nouveau client.
-     */
     @FXML
     public void ajouterClient() {
         try {
@@ -133,7 +118,7 @@ public class ClientController {
             Parent root = loader.load();
 
             FormulaireClientController controller = loader.getController();
-            controller.setClients(clients);
+            controller.setClients(clients);  // passer la liste partagée
             controller.setListView(listeClients);
 
             Stage stage = new Stage();
@@ -145,9 +130,6 @@ public class ClientController {
         }
     }
 
-    /**
-     * Ouvre la fenêtre de modification du client sélectionné.
-     */
     @FXML
     public void modifierClient() {
         Client client = listeClients.getSelectionModel().getSelectedItem();
@@ -158,7 +140,7 @@ public class ClientController {
             Parent root = loader.load();
 
             FormulaireClientController controller = loader.getController();
-            controller.setClients(listeClients.getItems());
+            controller.setClients(clients);  // passer la liste partagée
             controller.setListView(listeClients);
             controller.setClientAModifier(client);
 
@@ -174,10 +156,6 @@ public class ClientController {
         }
     }
 
-
-    /**
-     * Supprime le client sélectionné de la liste.
-     */
     @FXML
     public void supprimerClient() {
         Client selection = listeClients.getSelectionModel().getSelectedItem();
@@ -186,12 +164,6 @@ public class ClientController {
         }
     }
 
-    /**
-     * Change la vue affichée dans la fenêtre principale.
-     *
-     * @param stage La fenêtre principale.
-     * @param fxml  Le chemin du fichier FXML à charger.
-     */
     public static void changerVue(Stage stage, String fxml) {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxml));
@@ -202,16 +174,10 @@ public class ClientController {
             e.printStackTrace();
         }
     }
-    /**
-     * Gère le retour à la page d'accueil lors du clic sur le bouton correspondant.
-     *
-     * @param event L'événement de clic.
-     */
+
     @FXML
     private void onClickButtonMainPage(ActionEvent event) {
-        // Obtenir le bouton qui a déclenché l'événement
         Button button = (Button) event.getSource();
-        // Obtenir la scène à partir du bouton
         Stage stage = (Stage) button.getScene().getWindow();
         changerVue(stage, "view/Accueil-view.fxml");
     }

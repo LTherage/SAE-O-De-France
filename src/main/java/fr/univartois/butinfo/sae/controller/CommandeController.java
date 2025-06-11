@@ -3,7 +3,7 @@ package fr.univartois.butinfo.sae.controller;
 import fr.univartois.butinfo.sae.HelloApplication;
 import fr.univartois.butinfo.sae.model.Client;
 import fr.univartois.butinfo.sae.model.Commande;
-import javafx.collections.FXCollections;
+import fr.univartois.butinfo.sae.model.StockEau;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,66 +17,99 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * Contrôleur JavaFX pour la gestion des commandes.
- * Permet d'afficher, ajouter, modifier, supprimer des commandes et de naviguer entre les vues.
- */
 public class CommandeController {
 
-    /** ListView affichant la liste des clients associés aux commandes. */
     @FXML
-    private ListView<Client> listeCommandes;
+    private ListView<Commande> listeCommandes;
 
-    /** Label affichant le nom du client sélectionné. */
     @FXML
     private Label labelNom;
 
-    /** Label affichant les informations de la commande sélectionnée. */
     @FXML
     private Label labelCommande;
 
-    /** Label affichant l'adresse du client sélectionné. */
     @FXML
     private Label labelAdresse;
 
-    /** Liste observable contenant les commandes. */
-    private final ObservableList<Commande> commandes = FXCollections.observableArrayList();
+    // Utilisation des listes statiques du contrôleur principal
+    private final ObservableList<Commande> commandes = AccueilController.commandesAll;
+    private final ObservableList<Client> clients = AccueilController.clientsAll;
+    private final ObservableList<StockEau> stocks = AccueilController.stocksAll;
 
-    /**
-     * Initialise le contrôleur après le chargement du FXML.
-     */
     @FXML
     public void initialize() {
-        // À compléter selon la logique métier
+        listeCommandes.setItems(commandes);
+
+        listeCommandes.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                if (newVal.getClient() != null) {
+                    labelNom.setText(newVal.getClient().toString());
+                } else {
+                    labelNom.setText("-");
+                }
+                labelCommande.setText(String.valueOf(newVal.getId()));
+                if (newVal.getClient() != null && newVal.getClient().getAdresse() != null) {
+                    labelCommande.setText(String.valueOf(newVal.getId()));
+                } else {
+                    labelCommande.setText("-");
+                }
+            } else {
+                labelNom.setText("-");
+                labelCommande.setText("-");
+                labelAdresse.setText("-");
+            }
+        });
     }
 
-    /**
-     * Ouvre une fenêtre pour ajouter une nouvelle commande.
-     */
     @FXML
-    public void ajouterCommande() {
-        // À implémenter
+    private void ajouterCommande() {
+        ouvrirVueCommande(null);
     }
 
-    /**
-     * Permet de modifier la commande sélectionnée.
-     */
     @FXML
-    void modifierCommande() {
-        // À implémenter
+    private void modifierCommande() {
+        Commande selected = listeCommandes.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            ouvrirVueCommande(selected);
+        }
     }
 
-    /**
-     * Supprime la commande sélectionnée de la liste.
-     */
     @FXML
     private void supprimerCommande() {
-        // À implémenter
+        Commande selected = listeCommandes.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            commandes.remove(selected);
+        }
     }
 
-    /**
-     * Ferme l'application.
-     */
+    private void ouvrirVueCommande(Commande commande) {
+        try {
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("view/CommandeAjoutModif.fxml"));
+            Parent root = loader.load();
+
+            CommandeAjoutModifController controller = loader.getController();
+
+            // Passer les listes statiques à l'autre contrôleur
+            controller.setCommandes(commandes);
+            controller.setClients(clients);
+            controller.setStocks(stocks);
+
+            controller.setCommande(commande);
+
+            Stage stage = new Stage();
+            stage.setTitle((commande == null ? "Ajouter" : "Modifier") + " une commande");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void onClickButtonMainPage() {
+        // code pour revenir à la page principale
+    }
+
     @FXML
     private void quitterApp() {
         System.exit(0);
@@ -84,7 +117,6 @@ public class CommandeController {
 
     /**
      * Change la vue affichée dans la fenêtre principale.
-     *
      * @param stage La fenêtre principale.
      * @param fxml  Le chemin du fichier FXML à charger.
      */
@@ -101,7 +133,6 @@ public class CommandeController {
 
     /**
      * Gère le retour à la page d'accueil lors du clic sur le bouton correspondant.
-     *
      * @param event L'événement de clic.
      */
     @FXML
@@ -112,4 +143,5 @@ public class CommandeController {
         Stage stage = (Stage) button.getScene().getWindow();
         changerVue(stage, "view/Accueil-view.fxml");
     }
+
 }

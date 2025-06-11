@@ -5,7 +5,6 @@ import fr.univartois.butinfo.sae.model.StockEau;
 import fr.univartois.butinfo.sae.model.Entrepot;
 import fr.univartois.butinfo.sae.model.Adresse;
 import fr.univartois.butinfo.sae.model.Commune;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +16,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
 /**
  * Contrôleur JavaFX pour la gestion des stocks d'eau.
  * Permet d'afficher, ajouter, modifier, supprimer des stocks et de consulter leurs détails.
@@ -32,20 +32,17 @@ public class StockEauController {
     @FXML
     private Label entrepotLabel;
     /** Label affichant l'adresse de l'entrepôt du stock sélectionné. */
-
     @FXML
     private Label adresseLabel;
     /** Label affichant la commune de l'entrepôt du stock sélectionné. */
-
     @FXML
     private Label communeLabel;
     /** Label affichant la quantité du stock sélectionné. */
-
     @FXML
     private Label quantiteLabel;
     /** Liste observable contenant les stocks d'eau. */
+    private final ObservableList<StockEau> stockList = AccueilController.stocksAll;
 
-    private final ObservableList<StockEau> stockList = FXCollections.observableArrayList();
     /**
      * Initialise le contrôleur après le chargement du FXML.
      * Configure la ListView et l'affichage des détails.
@@ -74,6 +71,7 @@ public class StockEauController {
                 (obs, oldSelection, newSelection) -> afficherDetails(newSelection)
         );
     }
+
     /**
      * Affiche les détails du stock sélectionné dans les labels.
      * @param stock Le stock sélectionné.
@@ -125,6 +123,7 @@ public class StockEauController {
         stockList.add(newStock);
         ouvrirFenetreStock(newStock);
     }
+
     /**
      * Modifie le stock d'eau sélectionné en ouvrant la fenêtre d'édition.
      */
@@ -162,6 +161,7 @@ public class StockEauController {
             e.printStackTrace();
         }
     }
+
     /**
      * Supprime le stock d'eau sélectionné de la liste.
      */
@@ -173,13 +173,6 @@ public class StockEauController {
         }
     }
 
-    /**
-     * Définit la liste observable des stocks d'eau à afficher.
-     * @param list La liste des stocks d'eau.
-     */
-    public void setStockList(ObservableList<StockEau> list) {
-        stockList.setAll(list);
-    }
     /**
      * Change la vue affichée dans la fenêtre principale.
      * @param stage La fenêtre principale.
