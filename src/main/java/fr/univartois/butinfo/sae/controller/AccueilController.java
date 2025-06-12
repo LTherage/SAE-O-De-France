@@ -62,7 +62,6 @@ public class AccueilController {
      */
     @FXML
     private void client() {
-        System.out.println("Bouton : Application pour les clients");
         Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/Client-view.fxml");
     }
@@ -72,7 +71,6 @@ public class AccueilController {
      */
     @FXML
     private void StockEau() {
-        System.out.println("Bouton : Application pour les clients");
         Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/StockEauView.fxml");
     }
