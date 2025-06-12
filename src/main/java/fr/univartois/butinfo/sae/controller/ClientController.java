@@ -31,6 +31,8 @@ public class ClientController {
     public void initialize() {
         listeClients.setItems(clients);
 
+        trierClients();
+
         listeClients.setCellFactory(lv -> new ListCell<>() {
             @Override
             protected void updateItem(Client client, boolean empty) {
@@ -128,6 +130,8 @@ public class ClientController {
             stage.initOwner(labelInfo.getScene().getWindow());
             stage.initModality(Modality.WINDOW_MODAL);
             stage.showAndWait();
+
+            trierClients();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -154,6 +158,7 @@ public class ClientController {
             stage.initModality(Modality.WINDOW_MODAL);
             stage.showAndWait();
 
+            trierClients();
             listeClients.refresh();
 
         } catch (IOException e) {
@@ -167,6 +172,8 @@ public class ClientController {
         if (selection != null) {
             clients.remove(selection);
         }
+
+        trierClients();
     }
 
     public static void changerVue(Stage stage, String fxml) {
@@ -185,5 +192,13 @@ public class ClientController {
         Button button = (Button) event.getSource();
         Stage stage = (Stage) button.getScene().getWindow();
         changerVue(stage, "view/Accueil-view.fxml");
+    }
+
+    private void trierClients() {
+        clients.sort((c1, c2) -> {
+            String type1 = c1.getTypeClient() != null ? c1.getTypeClient() : "";
+            String type2 = c2.getTypeClient() != null ? c2.getTypeClient() : "";
+            return type1.compareToIgnoreCase(type2);
+        });
     }
 }

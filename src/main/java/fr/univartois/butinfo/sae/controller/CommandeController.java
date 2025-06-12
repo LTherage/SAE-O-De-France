@@ -40,6 +40,7 @@ public class CommandeController {
 
     @FXML
     public void initialize() {
+        commandes.sorted();
         listeCommandes.setItems(commandes);
 
         // Cellule personnalisée pour afficher plus d'infos dans la liste
@@ -88,6 +89,7 @@ public class CommandeController {
     @FXML
     private void ajouterCommande() {
         ouvrirVueCommande();
+        commandes.sorted();
     }
 
     @FXML
@@ -96,6 +98,7 @@ public class CommandeController {
         if (selected != null) {
             commandes.remove(selected);
         }
+        commandes.sorted();
     }
 
     private void ouvrirVueCommande() {

@@ -50,6 +50,7 @@ public class StockEauController {
     @FXML
     public void initialize() {
         waterListView.setItems(stockList);
+        trierStocks();
 
         // Cellule personnalisée pour afficher plus d'infos dans la liste
         waterListView.setCellFactory(list -> new ListCell<>() {
@@ -123,6 +124,7 @@ public class StockEauController {
         stockList.add(newStock);
         ouvrirFenetreStock(newStock);
         if (newStock.equals(new StockEau())) stockList.remove(newStock);
+        trierStocks();
     }
 
     /**
@@ -134,6 +136,7 @@ public class StockEauController {
         if (selected != null) {
             ouvrirFenetreStock(selected);
         }
+        trierStocks();
     }
 
     /**
@@ -172,6 +175,7 @@ public class StockEauController {
         if (selected != null) {
             stockList.remove(selected);
         }
+        trierStocks();
     }
 
     /**
@@ -203,4 +207,18 @@ public class StockEauController {
         changerVue(stage, "view/Accueil-view.fxml");
     }
 
+    private void trierStocks() {
+        stockList.sort((s1, s2) -> {
+            // On trie d'abord par catégorie, on gère les valeurs nulles en mettant "" à la place
+            String cat1 = s1.getCategorie() != null ? s1.getCategorie().toString() : "";
+            String cat2 = s2.getCategorie() != null ? s2.getCategorie().toString() : "";
+            int res = cat1.compareToIgnoreCase(cat2);
+            if (res != 0) return res;
+
+            // Puis par nom d'entrepôt si les catégories sont égales
+            String nomEntrepot1 = s1.getEntrepot() != null ? s1.getEntrepot().getNom() : "";
+            String nomEntrepot2 = s2.getEntrepot() != null ? s2.getEntrepot().getNom() : "";
+            return nomEntrepot1.compareToIgnoreCase(nomEntrepot2);
+        });
+    }
 }
