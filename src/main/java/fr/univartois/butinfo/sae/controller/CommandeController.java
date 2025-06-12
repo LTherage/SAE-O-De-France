@@ -1,10 +1,7 @@
 package fr.univartois.butinfo.sae.controller;
 
 import fr.univartois.butinfo.sae.HelloApplication;
-import fr.univartois.butinfo.sae.model.Client;
-import fr.univartois.butinfo.sae.model.Commande;
-import fr.univartois.butinfo.sae.model.Eau;
-import fr.univartois.butinfo.sae.model.StockEau;
+import fr.univartois.butinfo.sae.model.*;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -44,16 +42,36 @@ public class CommandeController {
     public void initialize() {
         listeCommandes.setItems(commandes);
 
+        // Cellule personnalisée pour afficher plus d'infos dans la liste
+        listeCommandes.setCellFactory(list -> new ListCell<>() {
+            @Override
+            protected void updateItem(Commande item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    setText(null);
+                } else {
+                    String text = "ID: " + item.getId() + ", Client: " + (item.getClient() != null ? item.getClient().getTypeClient() : "Aucun client");
+                    setText(text);
+                }
+            }
+        });
+
         listeCommandes.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
-            System.out.println(newVal.getClient() + " " + newVal.getId() + " " + newVal.getClient().getAdresse());
             if (newVal.getClient() != null) {
                 labelClient.setText(newVal.getClient().toString());
             } else {
                 labelClient.setText("-");
             }
 
+
+
+
             if (newVal.getLignesDeCommande() != null && !newVal.getLignesDeCommande().isEmpty()) {
-                labelLigneDeCommande.setText(String.valueOf(newVal.getLignesDeCommande().toString()));
+                String str = "";
+                for (LigneDeCommande ligne : newVal.getLignesDeCommande()) {
+                    str = str + ligne.toString() + "\n";
+                }
+                labelLigneDeCommande.setText(str);
             } else {
                 labelLigneDeCommande.setText("-");
             }
@@ -139,5 +157,4 @@ public class CommandeController {
         Stage stage = (Stage) button.getScene().getWindow();
         changerVue(stage, "view/Accueil-view.fxml");
     }
-
 }

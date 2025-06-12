@@ -25,7 +25,7 @@
     <Label text="Stock disponible :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
     <ComboBox fx:id="comboStockEau" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 
-    <Label fx:id="stockDetailsLabel" text="" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.columnIndex="3" GridPane.columnSpan="3" minWidth="200"/>
+    <Label fx:id="stockDetailsLabel" text="" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.columnIndex="3" GridPane.columnSpan="2" minWidth="200"/>
 
     <!-- 3. Eau pré-enregistrée correspondant à la catégorie -->
     <Label text="Eau choisie :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
@@ -38,7 +38,7 @@
         <Label fx:id="quantiteMaxLabel" text="(max: ?)"/>
     </HBox>
 
-    <Label fx:id="erreurLabel" text="" textFill="red" wrapText="true" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="3" minWidth="200"/>
+    <Label fx:id="erreurLabel" text="" textFill="red" wrapText="true" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
 
     <!-- Boutons -->
     <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.rowIndex="6" GridPane.columnIndex="1">
