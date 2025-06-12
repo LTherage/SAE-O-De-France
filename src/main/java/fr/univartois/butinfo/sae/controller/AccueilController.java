@@ -1,9 +1,7 @@
 package fr.univartois.butinfo.sae.controller;
 
 import fr.univartois.butinfo.sae.HelloApplication;
-import fr.univartois.butinfo.sae.model.Client;
-import fr.univartois.butinfo.sae.model.Commande;
-import fr.univartois.butinfo.sae.model.StockEau;
+import fr.univartois.butinfo.sae.model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Contrôleur JavaFX pour la page d'accueil de l'application.
@@ -30,7 +29,13 @@ public class AccueilController {
     public static final ObservableList<Commande> commandesAll = FXCollections.observableArrayList();
     public static final ObservableList<Client> clientsAll = FXCollections.observableArrayList();
     public static final ObservableList<StockEau> stocksAll = FXCollections.observableArrayList();
+    public static final ObservableList<Eau> eauxPreenregistrees = FXCollections.observableArrayList();
 
+    @FXML
+    public void initialize() {
+        eauxPreenregistrees.add(new Eau("O-De-France", Categorie.EAU_PLATE.toString(), 0.85));
+        eauxPreenregistrees.add(new Eau("Bas-De-France", Categorie.EAU_PLATE.toString(), 0.85));
+    }
 
     /**
      * Change la vue affichée dans la fenêtre principale.

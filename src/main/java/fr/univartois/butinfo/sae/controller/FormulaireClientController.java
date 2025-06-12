@@ -142,7 +142,7 @@ public class FormulaireClientController {
 		try {
 			String[] parts = adresseStr.split(" ", 2);
 			numero = Integer.parseInt(parts[0]);
-			if (numero <= 0) {
+			if (numero < 0) {
 				errorLabel.setText("Le numéro d'adresse doit être un entier positif.");
 				return;
 			}

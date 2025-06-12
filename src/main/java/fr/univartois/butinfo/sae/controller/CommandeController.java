@@ -3,6 +3,7 @@ package fr.univartois.butinfo.sae.controller;
 import fr.univartois.butinfo.sae.HelloApplication;
 import fr.univartois.butinfo.sae.model.Client;
 import fr.univartois.butinfo.sae.model.Commande;
+import fr.univartois.butinfo.sae.model.Eau;
 import fr.univartois.butinfo.sae.model.StockEau;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,19 +29,19 @@ public class CommandeController {
     @FXML
     private Label labelCommande;
 
-    @FXML
-    private Label labelAdresse;
-
     // Utilisation des listes statiques du contrôleur principal
     private final ObservableList<Commande> commandes = AccueilController.commandesAll;
     private final ObservableList<Client> clients = AccueilController.clientsAll;
     private final ObservableList<StockEau> stocks = AccueilController.stocksAll;
+    private final ObservableList<Eau> eauxPreenregistrees = AccueilController.eauxPreenregistrees;
+
 
     @FXML
     public void initialize() {
         listeCommandes.setItems(commandes);
 
         listeCommandes.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            System.out.println(newVal.getClient() + " " + newVal.getId() + " " + newVal.getClient().getAdresse());
             if (newVal != null) {
                 if (newVal.getClient() != null) {
                     labelNom.setText(newVal.getClient().toString());
@@ -56,22 +57,13 @@ public class CommandeController {
             } else {
                 labelNom.setText("-");
                 labelCommande.setText("-");
-                labelAdresse.setText("-");
             }
         });
     }
 
     @FXML
     private void ajouterCommande() {
-        ouvrirVueCommande(null);
-    }
-
-    @FXML
-    private void modifierCommande() {
-        Commande selected = listeCommandes.getSelectionModel().getSelectedItem();
-        if (selected != null) {
-            ouvrirVueCommande(selected);
-        }
+        ouvrirVueCommande();
     }
 
     @FXML
@@ -82,28 +74,30 @@ public class CommandeController {
         }
     }
 
-    private void ouvrirVueCommande(Commande commande) {
+    private void ouvrirVueCommande() {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("view/CommandeAjoutModif.fxml"));
             Parent root = loader.load();
 
             CommandeAjoutModifController controller = loader.getController();
 
-            // Passer les listes statiques à l'autre contrôleur
-            controller.setCommandes(commandes);
-            controller.setClients(clients);
-            controller.setStocks(stocks);
+            // Récupérer la liste des eaux enregistrées (à adapter selon ta structure)
 
-            controller.setCommande(commande);
+            // Si on ajoute une commande, on crée un nouvel objet
+
+            // Injecter les données dans le contrôleur
+            controller.initData(clients, stocks, eauxPreenregistrees, commandes);
 
             Stage stage = new Stage();
-            stage.setTitle((commande == null ? "Ajouter" : "Modifier") + " une commande");
+            stage.setTitle("Ajouter une commande");
             stage.setScene(new Scene(root));
             stage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     @FXML
     private void onClickButtonMainPage() {
@@ -124,7 +118,7 @@ public class CommandeController {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxml));
             Parent root = loader.load();
-            stage.setScene(new Scene(root, 900, 540));
+            stage.setScene(new Scene(root));
         } catch (IOException e) {
             System.err.println("Erreur lors du chargement de " + fxml);
             e.printStackTrace();
