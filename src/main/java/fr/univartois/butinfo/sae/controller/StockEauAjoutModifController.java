@@ -23,6 +23,7 @@ public class StockEauAjoutModifController {
 
     private StockEau stock;
 
+
     @FXML
     private void initialize() {
         categorieComboBox.setItems(FXCollections.observableArrayList(Categorie.values()));

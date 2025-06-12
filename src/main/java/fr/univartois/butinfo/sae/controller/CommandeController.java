@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -96,6 +97,8 @@ public class CommandeController {
             Stage stage = new Stage();
             stage.setTitle("Ajouter une commande");
             stage.setScene(new Scene(root));
+            stage.initOwner(labelClient.getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
             stage.show();
 
         } catch (IOException e) {

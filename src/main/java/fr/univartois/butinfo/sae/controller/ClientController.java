@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -124,6 +125,8 @@ public class ClientController {
             Stage stage = new Stage();
             stage.setTitle("Ajouter un client");
             stage.setScene(new Scene(root));
+            stage.initOwner(labelInfo.getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
             stage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
@@ -147,6 +150,8 @@ public class ClientController {
             Stage stage = new Stage();
             stage.setTitle("Modifier client");
             stage.setScene(new Scene(root));
+            stage.initOwner(labelInfo.getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
             stage.showAndWait();
 
             listeClients.refresh();

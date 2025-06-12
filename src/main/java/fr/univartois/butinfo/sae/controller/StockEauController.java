@@ -122,6 +122,7 @@ public class StockEauController {
         StockEau newStock = new StockEau();
         stockList.add(newStock);
         ouvrirFenetreStock(newStock);
+        if (newStock.equals(new StockEau())) stockList.remove(newStock);
     }
 
     /**
