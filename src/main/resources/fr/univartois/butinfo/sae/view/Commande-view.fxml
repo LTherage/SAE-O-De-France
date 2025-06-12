@@ -12,8 +12,11 @@
         <HBox spacing="20">
             <ListView fx:id="listeCommandes" />
             <VBox spacing="10">
-                <Label text="Nom de la personne :" />
-                <Label fx:id="labelNom" text="-" />
+                <Label text="Client :" />
+                <Label fx:id="labelClient" text="-" />
+
+                <Label text="Ligne de Commande :" />
+                <Label fx:id="labelLigneDeCommande" text="-" />
 
                 <Label text="ID de la commande :" />
                 <Label fx:id="labelCommande" text="-" />

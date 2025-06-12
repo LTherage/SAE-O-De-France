@@ -24,10 +24,13 @@ public class CommandeController {
     private ListView<Commande> listeCommandes;
 
     @FXML
-    private Label labelNom;
+    private Label labelClient;
 
     @FXML
     private Label labelCommande;
+
+    @FXML
+    private Label labelLigneDeCommande;
 
     // Utilisation des listes statiques du contrôleur principal
     private final ObservableList<Commande> commandes = AccueilController.commandesAll;
@@ -42,20 +45,22 @@ public class CommandeController {
 
         listeCommandes.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             System.out.println(newVal.getClient() + " " + newVal.getId() + " " + newVal.getClient().getAdresse());
-            if (newVal != null) {
-                if (newVal.getClient() != null) {
-                    labelNom.setText(newVal.getClient().toString());
-                } else {
-                    labelNom.setText("-");
-                }
-                labelCommande.setText(String.valueOf(newVal.getId()));
-                if (newVal.getClient() != null && newVal.getClient().getAdresse() != null) {
-                    labelCommande.setText(String.valueOf(newVal.getId()));
-                } else {
-                    labelCommande.setText("-");
-                }
+            if (newVal.getClient() != null) {
+                labelClient.setText(newVal.getClient().toString());
             } else {
-                labelNom.setText("-");
+                labelClient.setText("-");
+            }
+
+            if (newVal.getLignesDeCommande() != null && !newVal.getLignesDeCommande().isEmpty()) {
+                labelLigneDeCommande.setText(String.valueOf(newVal.getLignesDeCommande().toString()));
+            } else {
+                labelLigneDeCommande.setText("-");
+            }
+
+            labelCommande.setText(String.valueOf(newVal.getId()));
+            if (newVal.getClient() != null && newVal.getClient().getAdresse() != null) {
+                labelCommande.setText(String.valueOf(newVal.getId()));
+            } else {
                 labelCommande.setText("-");
             }
         });
