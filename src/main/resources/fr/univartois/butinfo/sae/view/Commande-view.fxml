@@ -6,7 +6,7 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="fr.univartois.butinfo.sae.controller.CommandeController"
-            stylesheets="@style.css">
+            stylesheets="@../style/style.css">
 
     <center>
         <HBox spacing="20">

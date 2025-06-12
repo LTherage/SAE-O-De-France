@@ -7,7 +7,7 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="fr.univartois.butinfo.sae.controller.AccueilController"
             prefHeight="400.0" prefWidth="600.0"
-            stylesheets="@style.css">
+            stylesheets="@../style/style.css">
 
     <children>
         <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
