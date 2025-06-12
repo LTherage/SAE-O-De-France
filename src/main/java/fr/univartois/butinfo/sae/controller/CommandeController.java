@@ -103,15 +103,9 @@ public class CommandeController {
         }
     }
 
-
     @FXML
     private void onClickButtonMainPage() {
         // code pour revenir à la page principale
-    }
-
-    @FXML
-    private void quitterApp() {
-        System.exit(0);
     }
 
     /**

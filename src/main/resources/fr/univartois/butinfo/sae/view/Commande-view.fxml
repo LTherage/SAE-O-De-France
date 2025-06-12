@@ -32,7 +32,6 @@
             <Button text="Revenir à l'accueil de l'application" onAction="#onClickButtonMainPage"/>
             <Button text="Ajouter" onAction="#ajouterCommande" />
             <Button text="Supprimer" onAction="#supprimerCommande" />
-            <Button text="quitter l'application" onAction="#quitterApp" />
         </HBox>
     </bottom>
 

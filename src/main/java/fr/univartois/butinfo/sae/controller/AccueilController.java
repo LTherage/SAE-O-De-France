@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class AccueilController {
      * Bouton permettant d'accéder à la gestion des clients.
      */
     @FXML
-    private Button connexion;
+    private Label LabelAccueil;
     public static final ObservableList<Commande> commandesAll = FXCollections.observableArrayList();
     public static final ObservableList<Client> clientsAll = FXCollections.observableArrayList();
     public static final ObservableList<StockEau> stocksAll = FXCollections.observableArrayList();
@@ -63,7 +63,7 @@ public class AccueilController {
     @FXML
     private void client() {
         System.out.println("Bouton : Application pour les clients");
-        Stage stage = (Stage) connexion.getScene().getWindow();
+        Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/Client-view.fxml");
     }
 
@@ -73,7 +73,7 @@ public class AccueilController {
     @FXML
     private void StockEau() {
         System.out.println("Bouton : Application pour les clients");
-        Stage stage = (Stage) connexion.getScene().getWindow();
+        Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/StockEauView.fxml");
     }
 
@@ -82,7 +82,13 @@ public class AccueilController {
      */
     @FXML
     private void commande() {
-        Stage stage = (Stage) connexion.getScene().getWindow();
+        Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/Commande-view.fxml");
     }
+
+    @FXML
+    private void quitterApp() {
+        System.exit(0);
+    }
+
 }
