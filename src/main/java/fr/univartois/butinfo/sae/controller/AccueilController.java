@@ -1,20 +1,19 @@
 package fr.univartois.butinfo.sae.controller;
 
 import fr.univartois.butinfo.sae.HelloApplication;
-import fr.univartois.butinfo.sae.model.Client;
-import fr.univartois.butinfo.sae.model.Commande;
-import fr.univartois.butinfo.sae.model.StockEau;
+import fr.univartois.butinfo.sae.model.*;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
 
 /**
  * Contrôleur JavaFX pour la page d'accueil de l'application.
@@ -26,12 +25,14 @@ public class AccueilController {
      * Bouton permettant d'accéder à la gestion des clients.
      */
     @FXML
-    private Button connexion;
+    private Label LabelAccueil;
     public static final ObservableList<Commande> commandesAll = FXCollections.observableArrayList();
     public static final ObservableList<Client> clientsAll = FXCollections.observableArrayList();
     public static final ObservableList<StockEau> stocksAll = FXCollections.observableArrayList();
-
-
+    public static final ObservableList<Eau> eauxPreenregistrees = FXCollections.observableArrayList(
+            new Eau("O-De-France", Categorie.EAU_PLATE.toString(), 0.85),
+            new Eau("Bas-De-France", Categorie.EAU_PLATE.toString(), 0.85)
+    );
     /**
      * Change la vue affichée dans la fenêtre principale.
      *
@@ -42,7 +43,14 @@ public class AccueilController {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxml));
             Parent root = loader.load();
-            stage.setScene(new Scene(root, 900, 540));
+            stage.setScene(new Scene(root));
+            // Récupère les dimensions de l'écran disponible
+            javafx.geometry.Rectangle2D screenBounds = javafx.stage.Screen.getPrimary().getVisualBounds();
+            stage.setX(screenBounds.getMinX());
+            stage.setY(screenBounds.getMinY());
+            stage.setWidth(screenBounds.getWidth());
+            stage.setHeight(screenBounds.getHeight());
+            stage.show();
         } catch (IOException e) {
             System.err.println("Erreur lors du chargement de " + fxml);
             e.printStackTrace();
@@ -54,8 +62,7 @@ public class AccueilController {
      */
     @FXML
     private void client() {
-        System.out.println("Bouton : Application pour les clients");
-        Stage stage = (Stage) connexion.getScene().getWindow();
+        Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/Client-view.fxml");
     }
 
@@ -64,8 +71,7 @@ public class AccueilController {
      */
     @FXML
     private void StockEau() {
-        System.out.println("Bouton : Application pour les clients");
-        Stage stage = (Stage) connexion.getScene().getWindow();
+        Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/StockEauView.fxml");
     }
 
@@ -74,21 +80,13 @@ public class AccueilController {
      */
     @FXML
     private void commande() {
-        Stage stage = (Stage) connexion.getScene().getWindow();
+        Stage stage = (Stage) LabelAccueil.getScene().getWindow();
         changerVue(stage, "view/Commande-view.fxml");
     }
 
-    /**
-     * Gère le retour à la page d'accueil lors du clic sur le bouton correspondant.
-     *
-     * @param event L'événement de clic.
-     */
     @FXML
-    private void onClickButtonMainPage(ActionEvent event) {
-        // Obtenir le bouton qui a déclenché l'événement
-        Button button = (Button) event.getSource();
-        // Obtenir la scène à partir du bouton
-        Stage stage = (Stage) button.getScene().getWindow();
-        changerVue(stage, "view/Accueil-view.fxml");
+    private void quitterApp() {
+        System.exit(0);
     }
+
 }

@@ -48,6 +48,12 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(viewContent);
         // que l'on place elle-même dans la fenêtre.
         stage.setScene(scene);
+        // Récupère les dimensions de l'écran disponible
+        javafx.geometry.Rectangle2D screenBounds = javafx.stage.Screen.getPrimary().getVisualBounds();
+        stage.setX(screenBounds.getMinX());
+        stage.setY(screenBounds.getMinY());
+        stage.setWidth(screenBounds.getWidth());
+        stage.setHeight(screenBounds.getHeight());
 
         // On peut ensuite donner un titre à la fenêtre.
         stage.setTitle("Bienvenue dans l'application de O-de-France!");
