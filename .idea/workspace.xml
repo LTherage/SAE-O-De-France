@@ -4,12 +4,107 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95edc809-a003-4855-ab25-ec92c4b91e60" name="Changes" comment="Ajouts de JavaDocs, et de displayName sur les tests">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/PMDPlugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
+    <list default="true" id="95edc809-a003-4855-ab25-ec92c4b91e60" name="Changes" comment="derniers modifs">
+      <change afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_10_29__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_11_27__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_12_29__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_14_38__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Adresse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Categorie.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/ClientEntreprise.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/ClientEtablissementPublic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/ClientParticulier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Commande.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Commune.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Eau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Entrepot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/HelloApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/LigneDeCommande.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/MethodePaiement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/Paiement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/PaiementSimple.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/StockEau$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/StockEau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/StockGlobal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/TypeClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/TypeEtablissement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_09_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_43__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_15_52__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_06_2025_22_14__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/AccueilController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/ClientController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/ClientController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/CommandeAjoutModifController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/CommandeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/FormulaireClientController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/FormulaireClientController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/StockEauAjoutModifController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/StockEauController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/StockEauController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/fr/univartois/butinfo/sae/model/AdresseTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/fr/univartois/butinfo/sae/model/ClientTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/fr/univartois/butinfo/sae/model/CommandeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/fr/univartois/butinfo/sae/model/CommuneTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/fr/univartois/butinfo/sae/model/EauTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/fr/univartois/butinfo/sae/model/EntrepotTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/fr/univartois/butinfo/sae/model/StockGlobalTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/distributions/SAE_dev2.tar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/distributions/SAE_dev2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/SAE_dev2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/fr.univartois.butinfo.sae.model.AdresseTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/fr.univartois.butinfo.sae.model.ClientTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/fr.univartois.butinfo.sae.model.CommandeTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/fr.univartois.butinfo.sae.model.CommuneTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/fr.univartois.butinfo.sae.model.EauTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/fr.univartois.butinfo.sae.model.EntrepotTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/fr.univartois.butinfo.sae.model.StockGlobalTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/fr.univartois.butinfo.sae.model.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/Accueil-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/Client-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/Commande-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/CommandeAjoutModif.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/StockEauAjout&amp;ModifView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/StockEauView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/bouteille.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/scripts/SAE_dev2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/scripts/SAE_dev2.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.AdresseTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.ClientTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.CommandeTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.CommuneTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.EauTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.EntrepotTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.StockGlobalTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommandeController$1.class.uniqueId4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommandeController.class.uniqueId3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StockEauAjoutModifController.class.uniqueId0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StockEauController$1.class.uniqueId1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StockEauController.class.uniqueId2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,56 +113,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/controller/HelloController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Adresse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Adresse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Categorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Categorie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEntreprise.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEntreprise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientParticulier.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/ClientParticulier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commande.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commande.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commune.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Commune.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Eau.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Eau.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Entrepot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Entrepot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/LigneDeCommande.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/LigneDeCommande.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/MethodePaiement.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/MethodePaiement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Paiement.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/Paiement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/PaiementSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/PaiementSimple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockEau.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockGlobal.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/StockGlobal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeEtablissement.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/fr/univartois/butinfo/sae/model/TypeEtablissement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/fr/univartois/butinfo/sae/view/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/HelloApplication.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/controller/FormulaireClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/controller/FormulaireClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Adresse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Adresse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Categorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEntreprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEntreprise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientParticulier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/ClientParticulier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commande.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commune.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Commune.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Eau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Eau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Entrepot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Entrepot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/LigneDeCommande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/LigneDeCommande.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/MethodePaiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/MethodePaiement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Paiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/Paiement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/PaiementSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/PaiementSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/RemisesPossibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/RemisesPossibles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockEau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockEau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockGlobal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/StockGlobal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TraitementPaiement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TraitementPaiement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeEtablissement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univartois/butinfo/sae/model/TypeEtablissement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,9 +208,15 @@
   <component name="GitLabMergeRequestsSettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;first&quot;: &quot;https://gitlab.univ-artois.fr/matheo_popieul/sae-2.01&quot;,
-    &quot;second&quot;: &quot;c4e070d1-4a2d-4578-9170-9d840fc27cd5&quot;
+    &quot;second&quot;: &quot;06fea66d-315b-45b0-bfb2-f3cad0d05d48&quot;
   }
 }</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/LTherage/SAE-O-De-France.git",
+    "accountId": "b16390e7-66d6-4e99-9a8e-1250377839b4"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -170,34 +225,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build SAE_dev2.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SAE_dev2 [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.sae-2.01 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.sae-2.01 [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.sae-2.01 [test].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ludovic/Documents/sae-2.01&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build SAE_dev2.executor": "Run",
+    "Gradle.SAE_dev2 [run].executor": "Run",
+    "Gradle.sae-2.01 [build].executor": "Run",
+    "Gradle.sae-2.01 [run].executor": "Run",
+    "Gradle.sae-2.01 [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ludovic/Documents/BUT1_Info /SAÉ 1er année/sae-2.01",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/fr/univartois/butinfo/sae/view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\azert\Documents\SAE_dev2\src\main\resources\fr\univartois\butinfo\sae\view" />
       <recent name="C:\Users\azert\Documents\SAE_dev2\src\main\java\fr\univartois\butinfo\ihm\model" />
@@ -301,6 +362,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="95edc809-a003-4855-ab25-ec92c4b91e60" name="Changes" comment="" />
@@ -311,6 +380,7 @@
       <workItem from="1749624780287" duration="1155000" />
       <workItem from="1749626062561" duration="308000" />
       <workItem from="1749627541337" duration="997000" />
+      <workItem from="1758226659003" duration="487000" />
     </task>
     <task id="LOCAL-00001" summary="Ajouts des dépendances">
       <option name="closed" value="true" />
@@ -368,11 +438,62 @@
       <option name="project" value="LOCAL" />
       <updated>1749645575608</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="coucou">
+      <option name="closed" value="true" />
+      <created>1749650514952</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749650514953</updated>
+    </task>
+    <task id="LOCAL-00009" summary="JavaDocs des controllers">
+      <option name="closed" value="true" />
+      <created>1749652668397</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749652668397</updated>
+    </task>
+    <task id="LOCAL-00010" summary="derniers modifs">
+      <option name="closed" value="true" />
+      <created>1749655528322</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1749655528322</updated>
+    </task>
+    <task id="LOCAL-00011" summary="derniers modifs">
+      <option name="closed" value="true" />
+      <created>1749655617505</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1749655617505</updated>
+    </task>
+    <task id="LOCAL-00012" summary="derniers modifs">
+      <option name="closed" value="true" />
+      <created>1749655737710</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1749655737710</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajouts des dépendances" />
@@ -382,7 +503,10 @@
     <MESSAGE value="Suppression de System.out.err.println() pour le &quot;debugage&quot;" />
     <MESSAGE value="Nouveaux fichiers de test + erreurs à corriger (merci Ugo)" />
     <MESSAGE value="Ajouts de JavaDocs, et de displayName sur les tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouts de JavaDocs, et de displayName sur les tests" />
+    <MESSAGE value="coucou" />
+    <MESSAGE value="JavaDocs des controllers" />
+    <MESSAGE value="derniers modifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="derniers modifs" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SAE_dev2$sae_2_01__test_.ic" NAME="sae-2.01 [test] Coverage Results" MODIFIED="1749645702341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

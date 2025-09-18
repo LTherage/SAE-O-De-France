@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fr.univartois.butinfo.sae.model.AdresseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-06-11T13:05:07" hostname="Lenovo-LOQ-15ARP9" time="0.039">
+  <properties/>
+  <testcase name="Test de la classe Adresse" classname="fr.univartois.butinfo.sae.model.AdresseTest" time="0.024"/>
+  <testcase name="Test de l'égalité des adresses" classname="fr.univartois.butinfo.sae.model.AdresseTest" time="0.001"/>
+  <testcase name="Test de la méthode toString de l'adresse" classname="fr.univartois.butinfo.sae.model.AdresseTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
