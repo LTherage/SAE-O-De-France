@@ -74,7 +74,7 @@
 
 ## 🔶 Features
 
-<code>❯ REPLACE-ME</code>
+<code>❯ Ajoute des clients / retire des clients, ajoute des commandes/ retire des commandes... </code>
 
 ---
 
