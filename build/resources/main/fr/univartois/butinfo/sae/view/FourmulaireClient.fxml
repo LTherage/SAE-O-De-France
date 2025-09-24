@@ -7,7 +7,7 @@
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="fr.univartois.butinfo.sae.controller.FormulaireClientController"
       spacing="10" alignment="TOP_LEFT"
-      stylesheets="@style.css">
+      stylesheets="@../style/style.css">
 
     <padding>
         <Insets top="10" right="10" bottom="10" left="10"/>

@@ -7,24 +7,19 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             xmlns="http://javafx.com/javafx"
             fx:controller="fr.univartois.butinfo.sae.controller.StockEauController"
-            stylesheets="@style.css">
+            stylesheets="@../style/style.css">
 
     <left>
-        <VBox spacing="10">
-            <padding>
-                <Insets top="10" right="10" bottom="10" left="10"/>
-            </padding>
-            <Label text="Stocks disponibles"/>
-            <ListView fx:id="waterListView" minWidth="250"/>
-            <HBox spacing="10">
-
-                <Button text="Revenir à l'accueil de l'application" onAction="#onClickButtonMainPage"/>
-                <Button text="Ajouter" onAction="#ajouterStock"/>
-                <Button text="Modifier" onAction="#modifierStock"/>
-                <Button text="Supprimer" onAction="#supprimerStock"/>
-            </HBox>
-        </VBox>
+            <ListView fx:id="waterListView"/>
     </left>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Revenir à l'accueil de l'application" onAction="#onClickButtonMainPage"/>
+            <Button text="Ajouter" onAction="#ajouterStock"/>
+            <Button text="Modifier" onAction="#modifierStock"/>
+            <Button text="Supprimer" onAction="#supprimerStock"/>
+        </HBox>
+    </bottom>
 
     <center>
         <VBox spacing="8">
@@ -39,4 +34,7 @@
             <Label fx:id="quantiteLabel" text="Quantité : "/>
         </VBox>
     </center>
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15" />
+    </padding>
 </BorderPane>

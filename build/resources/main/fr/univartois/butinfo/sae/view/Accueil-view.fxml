@@ -7,15 +7,17 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="fr.univartois.butinfo.sae.controller.AccueilController"
             prefHeight="400.0" prefWidth="600.0"
-            stylesheets="@style.css">
+            stylesheets="@../style/style.css">
 
     <children>
         <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
               AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
-            <Label text="Bienvenue sur l'application de gestion" style="-fx-font-size: 20px;"/>
-            <Button fx:id="connexion" text="Clients" onAction="#client" prefWidth="200"/>
+            <Label fx:id="LabelAccueil" text="Bienvenue sur l'application de gestion" style="-fx-font-size: 20px;"/>
+            <Button text="Clients" onAction="#client" prefWidth="200"/>
             <Button text="Commandes" onAction="#commande" prefWidth="200"/>
             <Button text="Stock d'eau" onAction="#StockEau" prefWidth="200"/>
+            <Button text="Quitter l'application" onAction="#quitterApp" prefWidth="200"/>
+
         </VBox>
     </children>
     <padding>
