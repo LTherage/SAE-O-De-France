@@ -25,7 +25,7 @@
 			 L 350.0 75.0 Z" fill="rgba(255,255,255,0.8)" />
 	<text x="400.0" y="100.0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#FFFFFF" filter="url(#shadow)">
 		SAE-O-De-France
-	</text>
+	</text><br>
 	<text x="400.0" y="150.0" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="rgba(255,255,255,0.9)">
 </text></svg>
 
