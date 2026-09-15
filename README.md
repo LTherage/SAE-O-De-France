@@ -68,13 +68,22 @@
 
 ## 🔷 Overview
 
+SAE-O-De-France est une application JavaFX de gestion d’une entreprise de distribution d’eau. Le projet implémente un système de gestion des clients, des commandes et des stocks, avec des règles de fidélité et de remise selon le type de client.
 
+L’application est structurée autour d’un modèle métier Java et de vues FXML. Elle permet d’ajouter, modifier et consulter les informations liées aux particuliers, entreprises et établissements publics, ainsi que de gérer les lots d’eau stockés dans les entrepôts.
 
 ---
 
 ## 🔶 Features
 
-<code>❯ Ajoute des clients / retire des clients, ajoute des commandes/ retire des commandes... </code>
+<code>❯ Gestion complète du cycle de vente de l’eau en JavaFX.</code>
+
+- Gestion des clients : particuliers, entreprises et établissements publics
+- Gestion des commandes et des lignes de commande associées
+- Suivi des stocks d’eau par catégorie et entrepôt
+- Calcul de remises et de bouteilles gratuites selon le profil client
+- Interface JavaFX avec navigation entre accueil, clients, commandes et stock
+- Modélisation du domaine avec classes métier et tests unitaires JUnit
 
 ---
 
@@ -122,15 +131,15 @@
 			</thead>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/gradlew.bat'>gradlew.bat</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 				</tr>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build.gradle'>build.gradle</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 				</tr>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/settings.gradle'>settings.gradle</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+					<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 				</tr>
 			</table>
 		</blockquote>
@@ -156,11 +165,11 @@
 					</thead>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/scripts/SAE_dev2'>SAE_dev2</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 						</tr>
 						<tr style='border-bottom: 1px solid #eee;'>
 							<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/scripts/SAE_dev2.bat'>SAE_dev2.bat</a></b></td>
-							<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+							<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 						</tr>
 					</table>
 				</blockquote>
@@ -186,7 +195,7 @@
 							</thead>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/reports/problems/problems-report.html'>problems-report.html</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 							</table>
 						</blockquote>
@@ -214,31 +223,31 @@
 							</thead>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.AdresseTest.xml'>TEST-fr.univartois.butinfo.sae.model.AdresseTest.xml</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.EntrepotTest.xml'>TEST-fr.univartois.butinfo.sae.model.EntrepotTest.xml</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.CommuneTest.xml'>TEST-fr.univartois.butinfo.sae.model.CommuneTest.xml</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.CommandeTest.xml'>TEST-fr.univartois.butinfo.sae.model.CommandeTest.xml</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.ClientTest.xml'>TEST-fr.univartois.butinfo.sae.model.ClientTest.xml</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.EauTest.xml'>TEST-fr.univartois.butinfo.sae.model.EauTest.xml</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/TEST-fr.univartois.butinfo.sae.model.StockGlobalTest.xml'>TEST-fr.univartois.butinfo.sae.model.StockGlobalTest.xml</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 							</table>
 							<!-- binary Submodule -->
@@ -256,15 +265,15 @@
 									</thead>
 										<tr style='border-bottom: 1px solid #eee;'>
 											<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/binary/output.bin'>output.bin</a></b></td>
-											<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+											<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 										</tr>
 										<tr style='border-bottom: 1px solid #eee;'>
 											<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/binary/results.bin'>results.bin</a></b></td>
-											<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+											<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 										</tr>
 										<tr style='border-bottom: 1px solid #eee;'>
 											<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/test-results/test/binary/output.bin.idx'>output.bin.idx</a></b></td>
-											<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+											<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 										</tr>
 									</table>
 								</blockquote>
@@ -324,31 +333,31 @@
 																	</thead>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/resources/main/fr/univartois/butinfo/sae/view/StockEauAjout&ModifView.fxml'>StockEauAjout&ModifView.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/resources/main/fr/univartois/butinfo/sae/view/StockEauView.fxml'>StockEauView.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/resources/main/fr/univartois/butinfo/sae/view/Commande-view.fxml'>Commande-view.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/resources/main/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml'>FourmulaireClient.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/resources/main/fr/univartois/butinfo/sae/view/CommandeAjoutModif.fxml'>CommandeAjoutModif.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/resources/main/fr/univartois/butinfo/sae/view/Client-view.fxml'>Client-view.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/resources/main/fr/univartois/butinfo/sae/view/Accueil-view.fxml'>Accueil-view.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																	</table>
 																</blockquote>
@@ -386,7 +395,7 @@
 							</thead>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/tmp/jar/MANIFEST.MF'>MANIFEST.MF</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 							</table>
 						</blockquote>
@@ -406,7 +415,7 @@
 							</thead>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/tmp/compileTestJava/previous-compilation-data.bin'>previous-compilation-data.bin</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 							</table>
 						</blockquote>
@@ -426,7 +435,7 @@
 							</thead>
 								<tr style='border-bottom: 1px solid #eee;'>
 									<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/build/tmp/compileJava/previous-compilation-data.bin'>previous-compilation-data.bin</a></b></td>
-									<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+									<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 								</tr>
 							</table>
 						</blockquote>
@@ -486,7 +495,7 @@
 															</thead>
 																<tr style='border-bottom: 1px solid #eee;'>
 																	<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/HelloApplication.java'>HelloApplication.java</a></b></td>
-																	<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																	<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																</tr>
 															</table>
 															<!-- model Submodule -->
@@ -504,83 +513,83 @@
 																	</thead>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/TypeClient.java'>TypeClient.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/StockGlobal.java'>StockGlobal.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/PaiementSimple.java'>PaiementSimple.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/ClientEtablissementPublic.java'>ClientEtablissementPublic.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Categorie.java'>Categorie.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Client.java'>Client.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Commande.java'>Commande.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/StockEau.java'>StockEau.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Commune.java'>Commune.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Adresse.java'>Adresse.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/MethodePaiement.java'>MethodePaiement.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Paiement.java'>Paiement.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/TraitementPaiement.java'>TraitementPaiement.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Eau.java'>Eau.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/Entrepot.java'>Entrepot.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/RemisesPossibles.java'>RemisesPossibles.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/LigneDeCommande.java'>LigneDeCommande.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/ClientParticulier.java'>ClientParticulier.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/TypeEtablissement.java'>TypeEtablissement.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/model/ClientEntreprise.java'>ClientEntreprise.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																	</table>
 																</blockquote>
@@ -600,31 +609,31 @@
 																	</thead>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/controller/FormulaireClientController.java'>FormulaireClientController.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/controller/StockEauAjoutModifController.java'>StockEauAjoutModifController.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/controller/CommandeAjoutModifController.java'>CommandeAjoutModifController.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/controller/StockEauController.java'>StockEauController.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/controller/CommandeController.java'>CommandeController.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/controller/ClientController.java'>ClientController.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/java/fr/univartois/butinfo/sae/controller/AccueilController.java'>AccueilController.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																	</table>
 																</blockquote>
@@ -684,7 +693,7 @@
 																	</thead>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/style/style.css'>style.css</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																	</table>
 																</blockquote>
@@ -704,31 +713,31 @@
 																	</thead>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/view/StockEauAjout&ModifView.fxml'>StockEauAjout&ModifView.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/view/StockEauView.fxml'>StockEauView.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/view/Commande-view.fxml'>Commande-view.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/view/FourmulaireClient.fxml'>FourmulaireClient.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/view/CommandeAjoutModif.fxml'>CommandeAjoutModif.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/view/Client-view.fxml'>Client-view.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/main/resources/fr/univartois/butinfo/sae/view/Accueil-view.fxml'>Accueil-view.fxml</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																	</table>
 																</blockquote>
@@ -796,31 +805,31 @@
 																	</thead>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/test/java/fr/univartois/butinfo/sae/model/CommuneTest.java'>CommuneTest.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/test/java/fr/univartois/butinfo/sae/model/AdresseTest.java'>AdresseTest.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/test/java/fr/univartois/butinfo/sae/model/EauTest.java'>EauTest.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/test/java/fr/univartois/butinfo/sae/model/ClientTest.java'>ClientTest.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/test/java/fr/univartois/butinfo/sae/model/EntrepotTest.java'>EntrepotTest.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/test/java/fr/univartois/butinfo/sae/model/CommandeTest.java'>CommandeTest.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																		<tr style='border-bottom: 1px solid #eee;'>
 																			<td style='padding: 8px;'><b><a href='https://github.com/LTherage/SAE-O-De-France/blob/master/src/test/java/fr/univartois/butinfo/sae/model/StockGlobalTest.java'>StockGlobalTest.java</a></b></td>
-																			<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+																			<td style='padding: 8px;'><code>❯ Gestion du modèle métier de l’application JavaFX</code></td>
 																		</tr>
 																	</table>
 																</blockquote>
@@ -847,66 +856,75 @@
 
 ### 🟦 Prerequisites
 
-This project requires the following dependencies:
+Ce projet nécessite les outils suivants :
 
-- **Programming Language:** Java
-- **Package Manager:** Gradle
+- **Langage:** Java 21
+- **Build tool:** Gradle
+- **Interface graphique:** JavaFX 21
+- **Tests:** JUnit 5, Mockito et AssertJ
 
 ### 🟨 Installation
 
-Build SAE-O-De-France from the source and intsall dependencies:
+Récupérez le projet puis installez ses dépendances JavaFX et de test :
 
-1. **Clone the repository:**
+1. **Cloner le dépôt :**
 
     ```sh
     ❯ git clone https://github.com/LTherage/SAE-O-De-France
     ```
 
-2. **Navigate to the project directory:**
+2. **Accéder au dossier du projet :**
 
     ```sh
     ❯ cd SAE-O-De-France
     ```
 
-3. **Install the dependencies:**
+3. **Télécharger les dépendances et compiler :**
 
-<!-- SHIELDS BADGE CURRENTLY DISABLED -->
-	<!-- [![gradle][gradle-shield]][gradle-link] -->
-	<!-- REFERENCE LINKS -->
-	<!-- [gradle-shield]: https://img.shields.io/badge/Gradle-02303A.svg?style={badge_style}&logo=gradle&logoColor=white -->
-	<!-- [gradle-link]: https://gradle.org/ -->
+    ```sh
+    ❯ ./gradlew build
+    ```
 
-	**Using [gradle](https://gradle.org/):**
+4. **(Windows uniquement) :**
 
-	```sh
-	❯ gradle build
-	```
+    ```bat
+    gradlew.bat build
+    ```
 
 ### 🟧 Usage
 
-Run the project with:
+Lancez l’application à partir du module Gradle :
 
-**Using [gradle](https://gradle.org/):**
 ```sh
-gradle run
+./gradlew run
+```
+
+Sous Windows :
+
+```bat
+gradlew.bat run
 ```
 
 ### 🟥 Testing
 
-Sae-o-de-france uses the {__test_framework__} test framework. Run the test suite with:
+Le projet inclut des tests unitaires sur le modèle métier. Pour exécuter la suite de tests :
 
-**Using [gradle](https://gradle.org/):**
 ```sh
-gradle test
+./gradlew test
 ```
+
+Les tests couvrent notamment les classes de gestion des adresses, des communes, des stocks, des commandes et des clients.
 
 ---
 
 ## ✨ Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Gestion des clients`** : ajout, modification et affichage des profils client
+- [X] **`Gestion des commandes`** : création de commandes et lignes associées
+- [X] **`Gestion du stock`** : suivi des bouteilles et des entrepôts
+- [X] **`Règles métier`** : remises, fidélité et bouteilles gratuites
+- [ ] **`Amélioration de l’interface`** : polish UX et validations avancées
+- [ ] **`Persistance`** : sauvegarde des données dans une base ou un fichier externe
 
 ---
 
@@ -955,13 +973,16 @@ gradle test
 
 ## 💫 License
 
-Sae-o-de-france is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+Ce dépôt est destiné à un usage pédagogique. Le code est protégé par les droits d’auteur et l’application est fournie sans fichier LICENSE dédié dans ce dépôt. Les sources peuvent être utilisées à des fins d’apprentissage et de démonstration, selon les bonnes pratiques de l’établissement et les consignes du cours.
 
 ---
 
 ## ✧ Acknowledgments
 
-- Credit `contributors`, `inspiration`, `references`, etc.
+- Université d’Artois et l’enseignement de développement logiciel
+- JavaFX pour l’interface utilisateur
+- Gradle pour la gestion du projet
+- JUnit, Mockito et AssertJ pour la validation des règles métier
 
 <div align="right">
 
